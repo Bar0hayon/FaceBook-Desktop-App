@@ -9,6 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using System.Net;
+using System.IO;
 
 namespace Ex01_FaceBook
 {
@@ -16,6 +19,8 @@ namespace Ex01_FaceBook
     {
         private User m_LoggedInUser;
         private bool v_LoggedIn = false;
+        ImageList m_ImageList = new ImageList();
+        List<String> m_ImageListUrls = new List<string>();
 
         public FaceBookMainForm()
         {
@@ -79,6 +84,7 @@ namespace Ex01_FaceBook
             pictureProfile.Visible = true;
             pictureProfile.LoadAsync(m_LoggedInUser.PictureNormalURL);
             FetchPersonalInformation();
+            fetchFriendsList();
         }
 
         private void FetchPersonalInformation()
@@ -95,6 +101,44 @@ namespace Ex01_FaceBook
             textUserBirthDay.Text = m_LoggedInUser.Birthday;
             textUserEmail.Text = m_LoggedInUser.Email;
             textUserGender.Text = m_LoggedInUser.Gender.ToString();
+        }
+
+        private void fetchFriendsList()
+        {
+            int index = 0;
+            m_ImageList.ImageSize = new Size(50, 50);
+            listViewFriendsList.Items.Clear();
+            foreach (User friend in m_LoggedInUser.Friends)
+            {
+                if (index < 3)
+                {
+                    m_ImageListUrls.Add(friend.PictureSmallURL);
+
+                    WebClient fetchImageUsingUrl = new WebClient();
+                    byte[] imageByte = fetchImageUsingUrl.DownloadData(m_ImageListUrls[index]);
+                    MemoryStream stream = new MemoryStream(imageByte);
+
+                    Image newImage = Image.FromStream(stream);
+                    m_ImageList.Images.Add(newImage);
+
+                    listViewFriendsList.Items.Add(friend.Name, index);
+                    index++;
+                }
+            }
+
+            listViewFriendsList.SmallImageList = m_ImageList;
+
+            if (m_LoggedInUser.Friends.Count == 0)
+            {
+                MessageBox.Show("No Friends to retrieve :(");
+            }
+
+            displayNumberOfFriends();
+        }
+
+        private void displayNumberOfFriends()
+        {
+            textBoxFriendsCounter.Text = listViewFriendsList.Items.Count.ToString();
         }
     }
 }
