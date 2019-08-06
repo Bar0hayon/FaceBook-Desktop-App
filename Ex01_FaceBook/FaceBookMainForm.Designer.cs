@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FaceBookMainForm));
             this.tabsControl = new System.Windows.Forms.TabControl();
             this.ProfileTab = new System.Windows.Forms.TabPage();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewUserStatuses = new System.Windows.Forms.ListView();
             this.textUserGender = new System.Windows.Forms.TextBox();
             this.textGenderReadOnly = new System.Windows.Forms.TextBox();
             this.textUserEmail = new System.Windows.Forms.TextBox();
@@ -64,12 +64,12 @@
             this.tabsControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabsControl.Name = "tabsControl";
             this.tabsControl.SelectedIndex = 0;
-            this.tabsControl.Size = new System.Drawing.Size(923, 458);
+            this.tabsControl.Size = new System.Drawing.Size(1038, 572);
             this.tabsControl.TabIndex = 0;
             // 
             // ProfileTab
             // 
-            this.ProfileTab.Controls.Add(this.listView1);
+            this.ProfileTab.Controls.Add(this.listViewUserStatuses);
             this.ProfileTab.Controls.Add(this.textUserGender);
             this.ProfileTab.Controls.Add(this.textGenderReadOnly);
             this.ProfileTab.Controls.Add(this.textUserEmail);
@@ -80,31 +80,33 @@
             this.ProfileTab.Controls.Add(this.textNameReadOnly);
             this.ProfileTab.Controls.Add(this.pictureProfile);
             this.ProfileTab.Controls.Add(this.buttonLoginLogout);
-            this.ProfileTab.Location = new System.Drawing.Point(4, 25);
+            this.ProfileTab.Location = new System.Drawing.Point(4, 29);
             this.ProfileTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ProfileTab.Name = "ProfileTab";
             this.ProfileTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ProfileTab.Size = new System.Drawing.Size(915, 429);
+            this.ProfileTab.Size = new System.Drawing.Size(1030, 539);
             this.ProfileTab.TabIndex = 0;
             this.ProfileTab.Text = "Profile";
             this.ProfileTab.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // listViewUserStatuses
             // 
-            this.listView1.Location = new System.Drawing.Point(140, 210);
-            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(365, 112);
-            this.listView1.TabIndex = 10;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listViewUserStatuses.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listViewUserStatuses.Location = new System.Drawing.Point(158, 262);
+            this.listViewUserStatuses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listViewUserStatuses.Name = "listViewUserStatuses";
+            this.listViewUserStatuses.Size = new System.Drawing.Size(691, 236);
+            this.listViewUserStatuses.TabIndex = 10;
+            this.listViewUserStatuses.UseCompatibleStateImageBehavior = false;
+            this.listViewUserStatuses.View = System.Windows.Forms.View.Details;
             // 
             // textUserGender
             // 
             this.textUserGender.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textUserGender.Location = new System.Drawing.Point(285, 148);
+            this.textUserGender.Location = new System.Drawing.Point(321, 185);
             this.textUserGender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textUserGender.Name = "textUserGender";
-            this.textUserGender.Size = new System.Drawing.Size(228, 15);
+            this.textUserGender.Size = new System.Drawing.Size(256, 19);
             this.textUserGender.TabIndex = 9;
             this.textUserGender.Visible = false;
             // 
@@ -112,11 +114,11 @@
             // 
             this.textGenderReadOnly.BackColor = System.Drawing.SystemColors.Window;
             this.textGenderReadOnly.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textGenderReadOnly.Location = new System.Drawing.Point(179, 148);
+            this.textGenderReadOnly.Location = new System.Drawing.Point(201, 185);
             this.textGenderReadOnly.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textGenderReadOnly.Name = "textGenderReadOnly";
             this.textGenderReadOnly.ReadOnly = true;
-            this.textGenderReadOnly.Size = new System.Drawing.Size(89, 15);
+            this.textGenderReadOnly.Size = new System.Drawing.Size(100, 19);
             this.textGenderReadOnly.TabIndex = 8;
             this.textGenderReadOnly.Text = "Gender:";
             this.textGenderReadOnly.Visible = false;
@@ -124,30 +126,30 @@
             // textUserEmail
             // 
             this.textUserEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textUserEmail.Location = new System.Drawing.Point(285, 117);
+            this.textUserEmail.Location = new System.Drawing.Point(321, 146);
             this.textUserEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textUserEmail.Name = "textUserEmail";
-            this.textUserEmail.Size = new System.Drawing.Size(228, 15);
+            this.textUserEmail.Size = new System.Drawing.Size(256, 19);
             this.textUserEmail.TabIndex = 7;
             this.textUserEmail.Visible = false;
             // 
             // textUserBirthDay
             // 
             this.textUserBirthDay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textUserBirthDay.Location = new System.Drawing.Point(285, 85);
+            this.textUserBirthDay.Location = new System.Drawing.Point(321, 106);
             this.textUserBirthDay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textUserBirthDay.Name = "textUserBirthDay";
-            this.textUserBirthDay.Size = new System.Drawing.Size(228, 15);
+            this.textUserBirthDay.Size = new System.Drawing.Size(256, 19);
             this.textUserBirthDay.TabIndex = 6;
             this.textUserBirthDay.Visible = false;
             // 
             // textUserFullName
             // 
             this.textUserFullName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textUserFullName.Location = new System.Drawing.Point(285, 54);
+            this.textUserFullName.Location = new System.Drawing.Point(321, 68);
             this.textUserFullName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textUserFullName.Name = "textUserFullName";
-            this.textUserFullName.Size = new System.Drawing.Size(228, 15);
+            this.textUserFullName.Size = new System.Drawing.Size(256, 19);
             this.textUserFullName.TabIndex = 5;
             this.textUserFullName.Visible = false;
             // 
@@ -155,11 +157,11 @@
             // 
             this.textEmailReadOnly.BackColor = System.Drawing.SystemColors.Window;
             this.textEmailReadOnly.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textEmailReadOnly.Location = new System.Drawing.Point(179, 117);
+            this.textEmailReadOnly.Location = new System.Drawing.Point(201, 146);
             this.textEmailReadOnly.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textEmailReadOnly.Name = "textEmailReadOnly";
             this.textEmailReadOnly.ReadOnly = true;
-            this.textEmailReadOnly.Size = new System.Drawing.Size(89, 15);
+            this.textEmailReadOnly.Size = new System.Drawing.Size(100, 19);
             this.textEmailReadOnly.TabIndex = 4;
             this.textEmailReadOnly.Text = "Email:";
             this.textEmailReadOnly.Visible = false;
@@ -168,11 +170,11 @@
             // 
             this.textBirthDayReadOnly.BackColor = System.Drawing.SystemColors.Window;
             this.textBirthDayReadOnly.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBirthDayReadOnly.Location = new System.Drawing.Point(179, 85);
+            this.textBirthDayReadOnly.Location = new System.Drawing.Point(201, 106);
             this.textBirthDayReadOnly.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBirthDayReadOnly.Name = "textBirthDayReadOnly";
             this.textBirthDayReadOnly.ReadOnly = true;
-            this.textBirthDayReadOnly.Size = new System.Drawing.Size(89, 15);
+            this.textBirthDayReadOnly.Size = new System.Drawing.Size(100, 19);
             this.textBirthDayReadOnly.TabIndex = 3;
             this.textBirthDayReadOnly.Text = "Date Of Birth:";
             this.textBirthDayReadOnly.Visible = false;
@@ -181,31 +183,31 @@
             // 
             this.textNameReadOnly.BackColor = System.Drawing.SystemColors.Window;
             this.textNameReadOnly.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textNameReadOnly.Location = new System.Drawing.Point(179, 54);
+            this.textNameReadOnly.Location = new System.Drawing.Point(201, 68);
             this.textNameReadOnly.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textNameReadOnly.Name = "textNameReadOnly";
             this.textNameReadOnly.ReadOnly = true;
-            this.textNameReadOnly.Size = new System.Drawing.Size(89, 15);
+            this.textNameReadOnly.Size = new System.Drawing.Size(100, 19);
             this.textNameReadOnly.TabIndex = 2;
             this.textNameReadOnly.Text = "Name:";
             this.textNameReadOnly.Visible = false;
             // 
             // pictureProfile
             // 
-            this.pictureProfile.Location = new System.Drawing.Point(24, 46);
+            this.pictureProfile.Location = new System.Drawing.Point(27, 58);
             this.pictureProfile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureProfile.Name = "pictureProfile";
-            this.pictureProfile.Size = new System.Drawing.Size(131, 127);
+            this.pictureProfile.Size = new System.Drawing.Size(147, 159);
             this.pictureProfile.TabIndex = 1;
             this.pictureProfile.TabStop = false;
             this.pictureProfile.Visible = false;
             // 
             // buttonLoginLogout
             // 
-            this.buttonLoginLogout.Location = new System.Drawing.Point(24, 5);
+            this.buttonLoginLogout.Location = new System.Drawing.Point(27, 6);
             this.buttonLoginLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonLoginLogout.Name = "buttonLoginLogout";
-            this.buttonLoginLogout.Size = new System.Drawing.Size(72, 37);
+            this.buttonLoginLogout.Size = new System.Drawing.Size(81, 46);
             this.buttonLoginLogout.TabIndex = 0;
             this.buttonLoginLogout.Text = "Login";
             this.buttonLoginLogout.UseVisualStyleBackColor = true;
@@ -213,11 +215,11 @@
             // 
             // FeedTab
             // 
-            this.FeedTab.Location = new System.Drawing.Point(4, 25);
+            this.FeedTab.Location = new System.Drawing.Point(4, 29);
             this.FeedTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FeedTab.Name = "FeedTab";
             this.FeedTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FeedTab.Size = new System.Drawing.Size(915, 429);
+            this.FeedTab.Size = new System.Drawing.Size(1030, 539);
             this.FeedTab.TabIndex = 1;
             this.FeedTab.Text = "Feed";
             this.FeedTab.UseVisualStyleBackColor = true;
@@ -227,11 +229,11 @@
             this.FriendsListTab.Controls.Add(this.listViewFriendsList);
             this.FriendsListTab.Controls.Add(this.textBoxNumberOfFriends);
             this.FriendsListTab.Controls.Add(this.textBoxFriendsCounter);
-            this.FriendsListTab.Location = new System.Drawing.Point(4, 25);
+            this.FriendsListTab.Location = new System.Drawing.Point(4, 29);
             this.FriendsListTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FriendsListTab.Name = "FriendsListTab";
             this.FriendsListTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FriendsListTab.Size = new System.Drawing.Size(915, 429);
+            this.FriendsListTab.Size = new System.Drawing.Size(1030, 539);
             this.FriendsListTab.TabIndex = 2;
             this.FriendsListTab.Text = "FriendsListTab";
             this.FriendsListTab.UseVisualStyleBackColor = true;
@@ -243,9 +245,10 @@
             this.friendColumnHeader});
             this.listViewFriendsList.FullRowSelect = true;
             this.listViewFriendsList.GridLines = true;
-            this.listViewFriendsList.Location = new System.Drawing.Point(8, 76);
+            this.listViewFriendsList.Location = new System.Drawing.Point(9, 95);
+            this.listViewFriendsList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listViewFriendsList.Name = "listViewFriendsList";
-            this.listViewFriendsList.Size = new System.Drawing.Size(265, 162);
+            this.listViewFriendsList.Size = new System.Drawing.Size(298, 202);
             this.listViewFriendsList.TabIndex = 17;
             this.listViewFriendsList.UseCompatibleStateImageBehavior = false;
             this.listViewFriendsList.View = System.Windows.Forms.View.SmallIcon;
@@ -259,9 +262,10 @@
             // 
             this.textBoxNumberOfFriends.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNumberOfFriends.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.textBoxNumberOfFriends.Location = new System.Drawing.Point(8, 21);
+            this.textBoxNumberOfFriends.Location = new System.Drawing.Point(9, 26);
+            this.textBoxNumberOfFriends.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxNumberOfFriends.Name = "textBoxNumberOfFriends";
-            this.textBoxNumberOfFriends.Size = new System.Drawing.Size(191, 18);
+            this.textBoxNumberOfFriends.Size = new System.Drawing.Size(215, 22);
             this.textBoxNumberOfFriends.TabIndex = 15;
             this.textBoxNumberOfFriends.Text = "Total number of friends:";
             // 
@@ -269,17 +273,18 @@
             // 
             this.textBoxFriendsCounter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxFriendsCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.textBoxFriendsCounter.Location = new System.Drawing.Point(205, 21);
+            this.textBoxFriendsCounter.Location = new System.Drawing.Point(231, 26);
+            this.textBoxFriendsCounter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxFriendsCounter.Name = "textBoxFriendsCounter";
-            this.textBoxFriendsCounter.Size = new System.Drawing.Size(39, 18);
+            this.textBoxFriendsCounter.Size = new System.Drawing.Size(44, 22);
             this.textBoxFriendsCounter.TabIndex = 14;
             this.textBoxFriendsCounter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FaceBookMainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 458);
+            this.ClientSize = new System.Drawing.Size(1038, 572);
             this.Controls.Add(this.tabsControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -311,7 +316,7 @@
         private System.Windows.Forms.TextBox textNameReadOnly;
         private System.Windows.Forms.TextBox textUserGender;
         private System.Windows.Forms.TextBox textGenderReadOnly;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewUserStatuses;
         private System.Windows.Forms.TextBox textBoxFriendsCounter;
         private System.Windows.Forms.TextBox textBoxNumberOfFriends;
         private System.Windows.Forms.ListView listViewFriendsList;

@@ -83,11 +83,53 @@ namespace Ex01_FaceBook
         {
             pictureProfile.Visible = true;
             pictureProfile.LoadAsync(m_LoggedInUser.PictureNormalURL);
-            FetchPersonalInformation();
-            fetchFriendsList();
+            fetchPersonalInformation();
+            //fetchFriendsList();
+            fetchUserStatuses();
         }
 
-        private void FetchPersonalInformation()
+        private void fetchUserStatuses()
+        {
+            ColumnHeader onlyColumn = new ColumnHeader();
+            onlyColumn.Text = "Statuses";
+            onlyColumn.TextAlign = HorizontalAlignment.Center;
+            onlyColumn.Width = listViewUserStatuses.Width;
+            listViewUserStatuses.Columns.Add(onlyColumn);
+            foreach (Status status in m_LoggedInUser.Statuses)
+            {
+                addStatusToStatusesListView(status);
+            }
+        }
+
+        private void addStatusToStatusesListView(Status i_Status)
+        {
+            const int statusFontSize = 12;
+            const int statusInfoFontSize = 8;
+            ListViewItem lvStatus = new ListViewItem(i_Status.Message);
+            Font statusFont = new Font(FontFamily.GenericSansSerif, statusFontSize);
+            lvStatus.Font = statusFont;
+            lvStatus.BackColor = Color.LightBlue;
+            ListViewItem lvStatusInfo = new ListViewItem(
+                string.Format("updated at {0} | {1} likes | {2} comments", 
+                i_Status.CreatedTime.ToString(),
+                i_Status.LikedBy.Count.ToString(),
+                i_Status.Comments.Count.ToString())
+                );
+            Font statusInfoFont = new Font(FontFamily.GenericSansSerif, statusInfoFontSize, 
+                FontStyle.Italic);
+            lvStatusInfo.Font = statusInfoFont;
+            lvStatusInfo.BackColor = Color.LightBlue;
+            ListViewItem lvSeparetor = new ListViewItem();
+            listViewUserStatuses.Items.AddRange(new ListViewItem[] { lvStatus, lvStatusInfo, lvSeparetor });
+            listViewUserStatuses.ItemSelectionChanged += listViewUserStatuses_ItemSelectionChanged;
+        }
+
+        private void listViewUserStatuses_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            if (e.IsSelected)
+                e.Item.Selected = false;
+        }
+        private void fetchPersonalInformation()
         {
             textBirthDayReadOnly.Visible = true;
             textNameReadOnly.Visible = true;
