@@ -91,11 +91,15 @@
             // 
             // listViewUserStatuses
             // 
+            this.listViewUserStatuses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listViewUserStatuses.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listViewUserStatuses.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listViewUserStatuses.Location = new System.Drawing.Point(158, 262);
+            this.listViewUserStatuses.Location = new System.Drawing.Point(6, 262);
             this.listViewUserStatuses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listViewUserStatuses.Name = "listViewUserStatuses";
-            this.listViewUserStatuses.Size = new System.Drawing.Size(691, 236);
+            this.listViewUserStatuses.Size = new System.Drawing.Size(1016, 270);
             this.listViewUserStatuses.TabIndex = 10;
             this.listViewUserStatuses.UseCompatibleStateImageBehavior = false;
             this.listViewUserStatuses.View = System.Windows.Forms.View.Details;

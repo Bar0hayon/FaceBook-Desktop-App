@@ -91,9 +91,8 @@ namespace Ex01_FaceBook
         private void fetchUserStatuses()
         {
             ColumnHeader onlyColumn = new ColumnHeader();
-            onlyColumn.Text = "Statuses";
-            onlyColumn.TextAlign = HorizontalAlignment.Center;
-            onlyColumn.Width = listViewUserStatuses.Width;
+            onlyColumn.Text = "";
+            onlyColumn.Width = listViewUserStatuses.Width - 20;
             listViewUserStatuses.Columns.Add(onlyColumn);
             foreach (Status status in m_LoggedInUser.Statuses)
             {
