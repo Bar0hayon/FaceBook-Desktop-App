@@ -1,6 +1,9 @@
-﻿using System;
+﻿using FacebookWrapper;
+using FacebookWrapper.ObjectModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -8,6 +11,7 @@ namespace Ex01_FaceBook
 {
     static class Program
     {
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -17,6 +21,7 @@ namespace Ex01_FaceBook
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FaceBookMainForm());
+            //AppManager.StartApp();
         }
     }
 }

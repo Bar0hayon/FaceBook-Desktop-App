@@ -21,10 +21,69 @@ namespace Ex01_FaceBook
         private bool v_LoggedIn = false;
         ImageList m_ImageList = new ImageList();
         List<String> m_ImageListUrls = new List<string>();
+        private AppSettings m_AppSettings;
+        LoginResult m_LoginResult;
 
         public FaceBookMainForm()
         {
             InitializeComponent();
+            m_AppSettings = new AppSettings();
+            m_AppSettings.LoadData();
+            this.Size = m_AppSettings.LastWindowSize;
+            this.Location = m_AppSettings.LastWindowLocation;
+            this.checkBoxRememberMe.Checked = m_AppSettings.RememberUser;
+        }
+
+        protected override void OnShown(EventArgs e)
+        {
+            base.OnShown(e);
+            if (m_AppSettings.RememberUser &&
+                !string.IsNullOrEmpty(m_AppSettings.LastAccessToken))
+            {
+                try
+                {
+                    m_LoginResult = FacebookService.Connect(m_AppSettings.LastAccessToken);
+                    loggedIn();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERROR: could not automaticlly connect to facebook");
+                }
+            }
+        }
+
+        private void loggedIn()
+        {
+            v_LoggedIn = true;
+            buttonLoginLogout.Text = "Logout";
+            if (!string.IsNullOrEmpty(m_LoginResult.AccessToken))
+            {
+                m_LoggedInUser = m_LoginResult.LoggedInUser;
+                fetchProfile();
+                //fetchFriendsList();
+            }
+            else
+            {
+                MessageBox.Show(m_LoginResult.ErrorMessage);
+            }
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            m_AppSettings.LastWindowSize = this.Size;
+            m_AppSettings.LastWindowLocation = this.Location;
+            m_AppSettings.RememberUser = this.checkBoxRememberMe.Checked;
+            if (m_AppSettings.RememberUser)
+            {
+                m_AppSettings.LastAccessToken = m_LoginResult.AccessToken;
+            }
+            else
+            {
+                m_AppSettings.LastAccessToken = null;
+            }
+
+            m_AppSettings.SaveToFile();
         }
 
         private void ButtonLoginLogout_Click(object sender, EventArgs e)
@@ -32,24 +91,24 @@ namespace Ex01_FaceBook
             if(!v_LoggedIn)
             {
                 login();
-                buttonLoginLogout.Text = "Logout";
+                loggedIn();
             }
             else
             {
-                FacebookService.Logout(loggedOutSuccessfully);
-                buttonLoginLogout.Text = "Login";
+                FacebookService.Logout(loggedOut);
             }
-            v_LoggedIn = !v_LoggedIn;
         }
 
-        private void loggedOutSuccessfully()
+        private void loggedOut()
         {
+            v_LoggedIn = false;
+            buttonLoginLogout.Text = "Login";
             ///////move all the profile info to invisible!!************
         }
 
         private void login()
         {
-            LoginResult loginResult = FacebookService.Login("1450160541956417", //(desig patter's "Design Patterns Course App 2.4" app)
+            m_LoginResult = FacebookService.Login("1450160541956417", //(desig patter's "Design Patterns Course App 2.4" app)
                 "public_profile",
                 "email",
                 "groups_access_member_info",
@@ -68,15 +127,6 @@ namespace Ex01_FaceBook
                 "user_tagged_places",
                 "user_videos"
                 );
-            if (!string.IsNullOrEmpty(loginResult.AccessToken))
-            {
-                m_LoggedInUser = loginResult.LoggedInUser;
-                fetchProfile();
-            }
-            else
-            {
-                MessageBox.Show(loginResult.ErrorMessage);
-            }
         }
 
         private void fetchProfile()
@@ -84,7 +134,6 @@ namespace Ex01_FaceBook
             pictureProfile.Visible = true;
             pictureProfile.LoadAsync(m_LoggedInUser.PictureNormalURL);
             fetchPersonalInformation();
-            //fetchFriendsList();
             fetchUserStatuses();
         }
 

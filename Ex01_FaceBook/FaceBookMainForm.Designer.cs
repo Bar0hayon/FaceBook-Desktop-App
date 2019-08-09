@@ -30,28 +30,29 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FaceBookMainForm));
             this.tabsControl = new System.Windows.Forms.TabControl();
-            this.ProfileTab = new System.Windows.Forms.TabPage();
-            this.listViewUserStatuses = new System.Windows.Forms.ListView();
-            this.textUserGender = new System.Windows.Forms.TextBox();
-            this.textGenderReadOnly = new System.Windows.Forms.TextBox();
-            this.textUserEmail = new System.Windows.Forms.TextBox();
-            this.textUserBirthDay = new System.Windows.Forms.TextBox();
-            this.textUserFullName = new System.Windows.Forms.TextBox();
-            this.textEmailReadOnly = new System.Windows.Forms.TextBox();
-            this.textBirthDayReadOnly = new System.Windows.Forms.TextBox();
-            this.textNameReadOnly = new System.Windows.Forms.TextBox();
-            this.pictureProfile = new System.Windows.Forms.PictureBox();
-            this.buttonLoginLogout = new System.Windows.Forms.Button();
             this.FeedTab = new System.Windows.Forms.TabPage();
             this.FriendsListTab = new System.Windows.Forms.TabPage();
             this.listViewFriendsList = new System.Windows.Forms.ListView();
             this.friendColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBoxNumberOfFriends = new System.Windows.Forms.TextBox();
             this.textBoxFriendsCounter = new System.Windows.Forms.TextBox();
+            this.ProfileTab = new System.Windows.Forms.TabPage();
+            this.textEmailReadOnly = new System.Windows.Forms.TextBox();
+            this.textUserFullName = new System.Windows.Forms.TextBox();
+            this.textBirthDayReadOnly = new System.Windows.Forms.TextBox();
+            this.textUserBirthDay = new System.Windows.Forms.TextBox();
+            this.textNameReadOnly = new System.Windows.Forms.TextBox();
+            this.textUserEmail = new System.Windows.Forms.TextBox();
+            this.buttonLoginLogout = new System.Windows.Forms.Button();
+            this.textGenderReadOnly = new System.Windows.Forms.TextBox();
+            this.pictureProfile = new System.Windows.Forms.PictureBox();
+            this.textUserGender = new System.Windows.Forms.TextBox();
+            this.listViewUserStatuses = new System.Windows.Forms.ListView();
+            this.checkBoxRememberMe = new System.Windows.Forms.CheckBox();
             this.tabsControl.SuspendLayout();
+            this.FriendsListTab.SuspendLayout();
             this.ProfileTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).BeginInit();
-            this.FriendsListTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabsControl
@@ -66,156 +67,6 @@
             this.tabsControl.SelectedIndex = 0;
             this.tabsControl.Size = new System.Drawing.Size(1038, 572);
             this.tabsControl.TabIndex = 0;
-            // 
-            // ProfileTab
-            // 
-            this.ProfileTab.Controls.Add(this.listViewUserStatuses);
-            this.ProfileTab.Controls.Add(this.textUserGender);
-            this.ProfileTab.Controls.Add(this.textGenderReadOnly);
-            this.ProfileTab.Controls.Add(this.textUserEmail);
-            this.ProfileTab.Controls.Add(this.textUserBirthDay);
-            this.ProfileTab.Controls.Add(this.textUserFullName);
-            this.ProfileTab.Controls.Add(this.textEmailReadOnly);
-            this.ProfileTab.Controls.Add(this.textBirthDayReadOnly);
-            this.ProfileTab.Controls.Add(this.textNameReadOnly);
-            this.ProfileTab.Controls.Add(this.pictureProfile);
-            this.ProfileTab.Controls.Add(this.buttonLoginLogout);
-            this.ProfileTab.Location = new System.Drawing.Point(4, 29);
-            this.ProfileTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ProfileTab.Name = "ProfileTab";
-            this.ProfileTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ProfileTab.Size = new System.Drawing.Size(1030, 539);
-            this.ProfileTab.TabIndex = 0;
-            this.ProfileTab.Text = "Profile";
-            this.ProfileTab.UseVisualStyleBackColor = true;
-            // 
-            // listViewUserStatuses
-            // 
-            this.listViewUserStatuses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listViewUserStatuses.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listViewUserStatuses.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listViewUserStatuses.Location = new System.Drawing.Point(6, 262);
-            this.listViewUserStatuses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listViewUserStatuses.Name = "listViewUserStatuses";
-            this.listViewUserStatuses.Size = new System.Drawing.Size(1016, 270);
-            this.listViewUserStatuses.TabIndex = 10;
-            this.listViewUserStatuses.UseCompatibleStateImageBehavior = false;
-            this.listViewUserStatuses.View = System.Windows.Forms.View.Details;
-            // 
-            // textUserGender
-            // 
-            this.textUserGender.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textUserGender.Location = new System.Drawing.Point(321, 185);
-            this.textUserGender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textUserGender.Name = "textUserGender";
-            this.textUserGender.Size = new System.Drawing.Size(256, 19);
-            this.textUserGender.TabIndex = 9;
-            this.textUserGender.Visible = false;
-            // 
-            // textGenderReadOnly
-            // 
-            this.textGenderReadOnly.BackColor = System.Drawing.SystemColors.Window;
-            this.textGenderReadOnly.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textGenderReadOnly.Location = new System.Drawing.Point(201, 185);
-            this.textGenderReadOnly.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textGenderReadOnly.Name = "textGenderReadOnly";
-            this.textGenderReadOnly.ReadOnly = true;
-            this.textGenderReadOnly.Size = new System.Drawing.Size(100, 19);
-            this.textGenderReadOnly.TabIndex = 8;
-            this.textGenderReadOnly.Text = "Gender:";
-            this.textGenderReadOnly.Visible = false;
-            // 
-            // textUserEmail
-            // 
-            this.textUserEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textUserEmail.Location = new System.Drawing.Point(321, 146);
-            this.textUserEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textUserEmail.Name = "textUserEmail";
-            this.textUserEmail.Size = new System.Drawing.Size(256, 19);
-            this.textUserEmail.TabIndex = 7;
-            this.textUserEmail.Visible = false;
-            // 
-            // textUserBirthDay
-            // 
-            this.textUserBirthDay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textUserBirthDay.Location = new System.Drawing.Point(321, 106);
-            this.textUserBirthDay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textUserBirthDay.Name = "textUserBirthDay";
-            this.textUserBirthDay.Size = new System.Drawing.Size(256, 19);
-            this.textUserBirthDay.TabIndex = 6;
-            this.textUserBirthDay.Visible = false;
-            // 
-            // textUserFullName
-            // 
-            this.textUserFullName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textUserFullName.Location = new System.Drawing.Point(321, 68);
-            this.textUserFullName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textUserFullName.Name = "textUserFullName";
-            this.textUserFullName.Size = new System.Drawing.Size(256, 19);
-            this.textUserFullName.TabIndex = 5;
-            this.textUserFullName.Visible = false;
-            // 
-            // textEmailReadOnly
-            // 
-            this.textEmailReadOnly.BackColor = System.Drawing.SystemColors.Window;
-            this.textEmailReadOnly.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textEmailReadOnly.Location = new System.Drawing.Point(201, 146);
-            this.textEmailReadOnly.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textEmailReadOnly.Name = "textEmailReadOnly";
-            this.textEmailReadOnly.ReadOnly = true;
-            this.textEmailReadOnly.Size = new System.Drawing.Size(100, 19);
-            this.textEmailReadOnly.TabIndex = 4;
-            this.textEmailReadOnly.Text = "Email:";
-            this.textEmailReadOnly.Visible = false;
-            // 
-            // textBirthDayReadOnly
-            // 
-            this.textBirthDayReadOnly.BackColor = System.Drawing.SystemColors.Window;
-            this.textBirthDayReadOnly.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBirthDayReadOnly.Location = new System.Drawing.Point(201, 106);
-            this.textBirthDayReadOnly.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBirthDayReadOnly.Name = "textBirthDayReadOnly";
-            this.textBirthDayReadOnly.ReadOnly = true;
-            this.textBirthDayReadOnly.Size = new System.Drawing.Size(100, 19);
-            this.textBirthDayReadOnly.TabIndex = 3;
-            this.textBirthDayReadOnly.Text = "Date Of Birth:";
-            this.textBirthDayReadOnly.Visible = false;
-            // 
-            // textNameReadOnly
-            // 
-            this.textNameReadOnly.BackColor = System.Drawing.SystemColors.Window;
-            this.textNameReadOnly.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textNameReadOnly.Location = new System.Drawing.Point(201, 68);
-            this.textNameReadOnly.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textNameReadOnly.Name = "textNameReadOnly";
-            this.textNameReadOnly.ReadOnly = true;
-            this.textNameReadOnly.Size = new System.Drawing.Size(100, 19);
-            this.textNameReadOnly.TabIndex = 2;
-            this.textNameReadOnly.Text = "Name:";
-            this.textNameReadOnly.Visible = false;
-            // 
-            // pictureProfile
-            // 
-            this.pictureProfile.Location = new System.Drawing.Point(27, 58);
-            this.pictureProfile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureProfile.Name = "pictureProfile";
-            this.pictureProfile.Size = new System.Drawing.Size(147, 159);
-            this.pictureProfile.TabIndex = 1;
-            this.pictureProfile.TabStop = false;
-            this.pictureProfile.Visible = false;
-            // 
-            // buttonLoginLogout
-            // 
-            this.buttonLoginLogout.Location = new System.Drawing.Point(27, 6);
-            this.buttonLoginLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonLoginLogout.Name = "buttonLoginLogout";
-            this.buttonLoginLogout.Size = new System.Drawing.Size(81, 46);
-            this.buttonLoginLogout.TabIndex = 0;
-            this.buttonLoginLogout.Text = "Login";
-            this.buttonLoginLogout.UseVisualStyleBackColor = true;
-            this.buttonLoginLogout.Click += new System.EventHandler(this.ButtonLoginLogout_Click);
             // 
             // FeedTab
             // 
@@ -284,6 +135,167 @@
             this.textBoxFriendsCounter.TabIndex = 14;
             this.textBoxFriendsCounter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // ProfileTab
+            // 
+            this.ProfileTab.Controls.Add(this.checkBoxRememberMe);
+            this.ProfileTab.Controls.Add(this.listViewUserStatuses);
+            this.ProfileTab.Controls.Add(this.buttonLoginLogout);
+            this.ProfileTab.Controls.Add(this.textUserGender);
+            this.ProfileTab.Controls.Add(this.pictureProfile);
+            this.ProfileTab.Controls.Add(this.textGenderReadOnly);
+            this.ProfileTab.Controls.Add(this.textEmailReadOnly);
+            this.ProfileTab.Controls.Add(this.textUserEmail);
+            this.ProfileTab.Controls.Add(this.textUserFullName);
+            this.ProfileTab.Controls.Add(this.textNameReadOnly);
+            this.ProfileTab.Controls.Add(this.textBirthDayReadOnly);
+            this.ProfileTab.Controls.Add(this.textUserBirthDay);
+            this.ProfileTab.Location = new System.Drawing.Point(4, 29);
+            this.ProfileTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ProfileTab.Name = "ProfileTab";
+            this.ProfileTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ProfileTab.Size = new System.Drawing.Size(1030, 539);
+            this.ProfileTab.TabIndex = 0;
+            this.ProfileTab.Text = "Profile";
+            this.ProfileTab.UseVisualStyleBackColor = true;
+            // 
+            // textEmailReadOnly
+            // 
+            this.textEmailReadOnly.BackColor = System.Drawing.SystemColors.Window;
+            this.textEmailReadOnly.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textEmailReadOnly.Location = new System.Drawing.Point(239, 153);
+            this.textEmailReadOnly.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textEmailReadOnly.Name = "textEmailReadOnly";
+            this.textEmailReadOnly.ReadOnly = true;
+            this.textEmailReadOnly.Size = new System.Drawing.Size(100, 19);
+            this.textEmailReadOnly.TabIndex = 4;
+            this.textEmailReadOnly.Text = "Email:";
+            this.textEmailReadOnly.Visible = false;
+            // 
+            // textUserFullName
+            // 
+            this.textUserFullName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textUserFullName.Location = new System.Drawing.Point(359, 75);
+            this.textUserFullName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textUserFullName.Name = "textUserFullName";
+            this.textUserFullName.Size = new System.Drawing.Size(256, 19);
+            this.textUserFullName.TabIndex = 5;
+            this.textUserFullName.Visible = false;
+            // 
+            // textBirthDayReadOnly
+            // 
+            this.textBirthDayReadOnly.BackColor = System.Drawing.SystemColors.Window;
+            this.textBirthDayReadOnly.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBirthDayReadOnly.Location = new System.Drawing.Point(239, 113);
+            this.textBirthDayReadOnly.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBirthDayReadOnly.Name = "textBirthDayReadOnly";
+            this.textBirthDayReadOnly.ReadOnly = true;
+            this.textBirthDayReadOnly.Size = new System.Drawing.Size(100, 19);
+            this.textBirthDayReadOnly.TabIndex = 3;
+            this.textBirthDayReadOnly.Text = "Date Of Birth:";
+            this.textBirthDayReadOnly.Visible = false;
+            // 
+            // textUserBirthDay
+            // 
+            this.textUserBirthDay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textUserBirthDay.Location = new System.Drawing.Point(359, 113);
+            this.textUserBirthDay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textUserBirthDay.Name = "textUserBirthDay";
+            this.textUserBirthDay.Size = new System.Drawing.Size(256, 19);
+            this.textUserBirthDay.TabIndex = 6;
+            this.textUserBirthDay.Visible = false;
+            // 
+            // textNameReadOnly
+            // 
+            this.textNameReadOnly.BackColor = System.Drawing.SystemColors.Window;
+            this.textNameReadOnly.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textNameReadOnly.Location = new System.Drawing.Point(239, 75);
+            this.textNameReadOnly.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textNameReadOnly.Name = "textNameReadOnly";
+            this.textNameReadOnly.ReadOnly = true;
+            this.textNameReadOnly.Size = new System.Drawing.Size(100, 19);
+            this.textNameReadOnly.TabIndex = 2;
+            this.textNameReadOnly.Text = "Name:";
+            this.textNameReadOnly.Visible = false;
+            // 
+            // textUserEmail
+            // 
+            this.textUserEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textUserEmail.Location = new System.Drawing.Point(359, 153);
+            this.textUserEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textUserEmail.Name = "textUserEmail";
+            this.textUserEmail.Size = new System.Drawing.Size(256, 19);
+            this.textUserEmail.TabIndex = 7;
+            this.textUserEmail.Visible = false;
+            // 
+            // buttonLoginLogout
+            // 
+            this.buttonLoginLogout.Location = new System.Drawing.Point(65, 13);
+            this.buttonLoginLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonLoginLogout.Name = "buttonLoginLogout";
+            this.buttonLoginLogout.Size = new System.Drawing.Size(81, 46);
+            this.buttonLoginLogout.TabIndex = 0;
+            this.buttonLoginLogout.Text = "Login";
+            this.buttonLoginLogout.UseVisualStyleBackColor = true;
+            this.buttonLoginLogout.Click += new System.EventHandler(this.ButtonLoginLogout_Click);
+            // 
+            // textGenderReadOnly
+            // 
+            this.textGenderReadOnly.BackColor = System.Drawing.SystemColors.Window;
+            this.textGenderReadOnly.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textGenderReadOnly.Location = new System.Drawing.Point(239, 192);
+            this.textGenderReadOnly.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textGenderReadOnly.Name = "textGenderReadOnly";
+            this.textGenderReadOnly.ReadOnly = true;
+            this.textGenderReadOnly.Size = new System.Drawing.Size(100, 19);
+            this.textGenderReadOnly.TabIndex = 8;
+            this.textGenderReadOnly.Text = "Gender:";
+            this.textGenderReadOnly.Visible = false;
+            // 
+            // pictureProfile
+            // 
+            this.pictureProfile.Location = new System.Drawing.Point(65, 65);
+            this.pictureProfile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureProfile.Name = "pictureProfile";
+            this.pictureProfile.Size = new System.Drawing.Size(147, 159);
+            this.pictureProfile.TabIndex = 1;
+            this.pictureProfile.TabStop = false;
+            this.pictureProfile.Visible = false;
+            // 
+            // textUserGender
+            // 
+            this.textUserGender.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textUserGender.Location = new System.Drawing.Point(359, 192);
+            this.textUserGender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textUserGender.Name = "textUserGender";
+            this.textUserGender.Size = new System.Drawing.Size(256, 19);
+            this.textUserGender.TabIndex = 9;
+            this.textUserGender.Visible = false;
+            // 
+            // listViewUserStatuses
+            // 
+            this.listViewUserStatuses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listViewUserStatuses.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listViewUserStatuses.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listViewUserStatuses.Location = new System.Drawing.Point(5, 253);
+            this.listViewUserStatuses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listViewUserStatuses.Name = "listViewUserStatuses";
+            this.listViewUserStatuses.Size = new System.Drawing.Size(1018, 274);
+            this.listViewUserStatuses.TabIndex = 10;
+            this.listViewUserStatuses.UseCompatibleStateImageBehavior = false;
+            this.listViewUserStatuses.View = System.Windows.Forms.View.Details;
+            // 
+            // checkBoxRememberMe
+            // 
+            this.checkBoxRememberMe.AutoSize = true;
+            this.checkBoxRememberMe.Location = new System.Drawing.Point(165, 24);
+            this.checkBoxRememberMe.Name = "checkBoxRememberMe";
+            this.checkBoxRememberMe.Size = new System.Drawing.Size(140, 24);
+            this.checkBoxRememberMe.TabIndex = 11;
+            this.checkBoxRememberMe.Text = "Remember Me";
+            this.checkBoxRememberMe.UseVisualStyleBackColor = true;
+            // 
             // FaceBookMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -293,13 +305,14 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FaceBookMainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FaceBook";
             this.tabsControl.ResumeLayout(false);
+            this.FriendsListTab.ResumeLayout(false);
+            this.FriendsListTab.PerformLayout();
             this.ProfileTab.ResumeLayout(false);
             this.ProfileTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).EndInit();
-            this.FriendsListTab.ResumeLayout(false);
-            this.FriendsListTab.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -307,24 +320,25 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabsControl;
-        private System.Windows.Forms.TabPage ProfileTab;
         private System.Windows.Forms.TabPage FeedTab;
         private System.Windows.Forms.TabPage FriendsListTab;
-        private System.Windows.Forms.Button buttonLoginLogout;
-        private System.Windows.Forms.PictureBox pictureProfile;
-        private System.Windows.Forms.TextBox textUserEmail;
-        private System.Windows.Forms.TextBox textUserBirthDay;
-        private System.Windows.Forms.TextBox textUserFullName;
-        private System.Windows.Forms.TextBox textEmailReadOnly;
-        private System.Windows.Forms.TextBox textBirthDayReadOnly;
-        private System.Windows.Forms.TextBox textNameReadOnly;
-        private System.Windows.Forms.TextBox textUserGender;
-        private System.Windows.Forms.TextBox textGenderReadOnly;
-        private System.Windows.Forms.ListView listViewUserStatuses;
         private System.Windows.Forms.TextBox textBoxFriendsCounter;
         private System.Windows.Forms.TextBox textBoxNumberOfFriends;
         private System.Windows.Forms.ListView listViewFriendsList;
         private System.Windows.Forms.ColumnHeader friendColumnHeader;
+        private System.Windows.Forms.TabPage ProfileTab;
+        private System.Windows.Forms.CheckBox checkBoxRememberMe;
+        private System.Windows.Forms.ListView listViewUserStatuses;
+        private System.Windows.Forms.TextBox textUserGender;
+        private System.Windows.Forms.TextBox textGenderReadOnly;
+        private System.Windows.Forms.TextBox textUserEmail;
+        private System.Windows.Forms.TextBox textNameReadOnly;
+        private System.Windows.Forms.TextBox textUserBirthDay;
+        private System.Windows.Forms.TextBox textBirthDayReadOnly;
+        private System.Windows.Forms.TextBox textUserFullName;
+        private System.Windows.Forms.TextBox textEmailReadOnly;
+        private System.Windows.Forms.PictureBox pictureProfile;
+        private System.Windows.Forms.Button buttonLoginLogout;
     }
 }
 
