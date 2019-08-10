@@ -70,6 +70,7 @@
             this.textBoxNumberOfFriends = new System.Windows.Forms.TextBox();
             this.textBoxFriendsCounter = new System.Windows.Forms.TextBox();
             this.textBoxFriendsListHeadLine = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabsControl.SuspendLayout();
             this.ProfileTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).BeginInit();
@@ -468,6 +469,7 @@
             // 
             // FriendsListTab
             // 
+            this.FriendsListTab.Controls.Add(this.label1);
             this.FriendsListTab.Controls.Add(this.textBoxFriendsListHeadLine);
             this.FriendsListTab.Controls.Add(this.textBoxAlbumsHeadLine);
             this.FriendsListTab.Controls.Add(this.listViewSelectedAlbumPhotos);
@@ -555,6 +557,15 @@
             this.textBoxFriendsListHeadLine.Text = "Desig\'s Friends";
             this.textBoxFriendsListHeadLine.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(431, 347);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "label1";
+            // 
             // FaceBookMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -629,6 +640,7 @@
         private System.Windows.Forms.ListView listViewSelectedAlbumPhotos;
         private System.Windows.Forms.TextBox textBoxAlbumsHeadLine;
         private System.Windows.Forms.TextBox textBoxFriendsListHeadLine;
+        private System.Windows.Forms.Label label1;
     }
 }
 

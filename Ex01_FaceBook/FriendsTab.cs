@@ -61,6 +61,7 @@ namespace Ex01_FaceBook
 
         private void fetchAlbumsList()
         {
+            listViewSelectedAlbumPhotos.ItemSelectionChanged += ListViewSelectedAlbumPhotos_ItemSelectionChanged;
             int albumIndex = 0;
             m_ImageList.ImageSize = new Size(40, 40);
             foreach (Album album in m_LoggedInUser.Albums)
@@ -78,6 +79,19 @@ namespace Ex01_FaceBook
                 albumIndex++;
             }
             listViewSelectedAlbumPhotos.LargeImageList = m_ImageList;
+        }
+
+        private void ListViewSelectedAlbumPhotos_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            try
+            {
+                int selectedIndex = listViewSelectedAlbumPhotos.SelectedIndices[0];
+                label1.Text = m_LoggedInUser.Albums[selectedIndex].Name;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
