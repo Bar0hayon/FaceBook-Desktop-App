@@ -63,14 +63,14 @@
             this.labelMatchGender = new System.Windows.Forms.Label();
             this.labelMatchQuestion = new System.Windows.Forms.Label();
             this.FriendsListTab = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxFriendsListHeadLine = new System.Windows.Forms.TextBox();
             this.textBoxAlbumsHeadLine = new System.Windows.Forms.TextBox();
             this.listViewSelectedAlbumPhotos = new System.Windows.Forms.ListView();
             this.pictureBoxSelectedFriend = new System.Windows.Forms.PictureBox();
             this.listBoxFriendsList = new System.Windows.Forms.ListBox();
             this.textBoxNumberOfFriends = new System.Windows.Forms.TextBox();
             this.textBoxFriendsCounter = new System.Windows.Forms.TextBox();
-            this.textBoxFriendsListHeadLine = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabsControl.SuspendLayout();
             this.ProfileTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).BeginInit();
@@ -93,7 +93,7 @@
             this.tabsControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabsControl.Name = "tabsControl";
             this.tabsControl.SelectedIndex = 0;
-            this.tabsControl.Size = new System.Drawing.Size(1030, 602);
+            this.tabsControl.Size = new System.Drawing.Size(1159, 752);
             this.tabsControl.TabIndex = 0;
             // 
             // ProfileTab
@@ -111,11 +111,11 @@
             this.ProfileTab.Controls.Add(this.textNameReadOnly);
             this.ProfileTab.Controls.Add(this.textBirthDayReadOnly);
             this.ProfileTab.Controls.Add(this.textUserBirthDay);
-            this.ProfileTab.Location = new System.Drawing.Point(4, 25);
+            this.ProfileTab.Location = new System.Drawing.Point(4, 29);
             this.ProfileTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ProfileTab.Name = "ProfileTab";
             this.ProfileTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ProfileTab.Size = new System.Drawing.Size(1022, 573);
+            this.ProfileTab.Size = new System.Drawing.Size(1151, 719);
             this.ProfileTab.TabIndex = 0;
             this.ProfileTab.Text = "Profile";
             this.ProfileTab.UseVisualStyleBackColor = true;
@@ -129,20 +129,20 @@
             "Upload Date - most recent",
             "Number of likes",
             "Number of comments"});
-            this.comboBoxStatusesSort.Location = new System.Drawing.Point(29, 210);
+            this.comboBoxStatusesSort.Location = new System.Drawing.Point(33, 262);
             this.comboBoxStatusesSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxStatusesSort.Name = "comboBoxStatusesSort";
-            this.comboBoxStatusesSort.Size = new System.Drawing.Size(197, 24);
+            this.comboBoxStatusesSort.Size = new System.Drawing.Size(221, 28);
             this.comboBoxStatusesSort.TabIndex = 13;
             this.comboBoxStatusesSort.Visible = false;
             // 
             // checkBoxRememberMe
             // 
             this.checkBoxRememberMe.AutoSize = true;
-            this.checkBoxRememberMe.Location = new System.Drawing.Point(118, 19);
+            this.checkBoxRememberMe.Location = new System.Drawing.Point(133, 24);
             this.checkBoxRememberMe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxRememberMe.Name = "checkBoxRememberMe";
-            this.checkBoxRememberMe.Size = new System.Drawing.Size(122, 21);
+            this.checkBoxRememberMe.Size = new System.Drawing.Size(140, 24);
             this.checkBoxRememberMe.TabIndex = 11;
             this.checkBoxRememberMe.Text = "Remember Me";
             this.checkBoxRememberMe.UseVisualStyleBackColor = true;
@@ -154,20 +154,20 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listViewUserStatuses.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listViewUserStatuses.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listViewUserStatuses.Location = new System.Drawing.Point(4, 237);
-            this.listViewUserStatuses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listViewUserStatuses.Location = new System.Drawing.Point(4, 274);
+            this.listViewUserStatuses.Margin = new System.Windows.Forms.Padding(0);
             this.listViewUserStatuses.Name = "listViewUserStatuses";
-            this.listViewUserStatuses.Size = new System.Drawing.Size(1066, 192);
+            this.listViewUserStatuses.Size = new System.Drawing.Size(1151, 443);
             this.listViewUserStatuses.TabIndex = 10;
             this.listViewUserStatuses.UseCompatibleStateImageBehavior = false;
             this.listViewUserStatuses.View = System.Windows.Forms.View.Details;
             // 
             // buttonLoginLogout
             // 
-            this.buttonLoginLogout.Location = new System.Drawing.Point(29, 10);
+            this.buttonLoginLogout.Location = new System.Drawing.Point(33, 12);
             this.buttonLoginLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonLoginLogout.Name = "buttonLoginLogout";
-            this.buttonLoginLogout.Size = new System.Drawing.Size(72, 37);
+            this.buttonLoginLogout.Size = new System.Drawing.Size(81, 46);
             this.buttonLoginLogout.TabIndex = 0;
             this.buttonLoginLogout.Text = "Login";
             this.buttonLoginLogout.UseVisualStyleBackColor = true;
@@ -176,19 +176,19 @@
             // textUserGender
             // 
             this.textUserGender.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textUserGender.Location = new System.Drawing.Point(291, 154);
+            this.textUserGender.Location = new System.Drawing.Point(327, 192);
             this.textUserGender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textUserGender.Name = "textUserGender";
-            this.textUserGender.Size = new System.Drawing.Size(228, 15);
+            this.textUserGender.Size = new System.Drawing.Size(256, 19);
             this.textUserGender.TabIndex = 9;
             this.textUserGender.Visible = false;
             // 
             // pictureProfile
             // 
-            this.pictureProfile.Location = new System.Drawing.Point(29, 52);
+            this.pictureProfile.Location = new System.Drawing.Point(33, 65);
             this.pictureProfile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureProfile.Name = "pictureProfile";
-            this.pictureProfile.Size = new System.Drawing.Size(131, 127);
+            this.pictureProfile.Size = new System.Drawing.Size(147, 159);
             this.pictureProfile.TabIndex = 1;
             this.pictureProfile.TabStop = false;
             this.pictureProfile.Visible = false;
@@ -197,11 +197,11 @@
             // 
             this.textGenderReadOnly.BackColor = System.Drawing.SystemColors.Window;
             this.textGenderReadOnly.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textGenderReadOnly.Location = new System.Drawing.Point(184, 154);
+            this.textGenderReadOnly.Location = new System.Drawing.Point(207, 192);
             this.textGenderReadOnly.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textGenderReadOnly.Name = "textGenderReadOnly";
             this.textGenderReadOnly.ReadOnly = true;
-            this.textGenderReadOnly.Size = new System.Drawing.Size(89, 15);
+            this.textGenderReadOnly.Size = new System.Drawing.Size(100, 19);
             this.textGenderReadOnly.TabIndex = 8;
             this.textGenderReadOnly.Text = "Gender:";
             this.textGenderReadOnly.Visible = false;
@@ -210,11 +210,11 @@
             // 
             this.textEmailReadOnly.BackColor = System.Drawing.SystemColors.Window;
             this.textEmailReadOnly.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textEmailReadOnly.Location = new System.Drawing.Point(184, 122);
+            this.textEmailReadOnly.Location = new System.Drawing.Point(207, 152);
             this.textEmailReadOnly.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textEmailReadOnly.Name = "textEmailReadOnly";
             this.textEmailReadOnly.ReadOnly = true;
-            this.textEmailReadOnly.Size = new System.Drawing.Size(89, 15);
+            this.textEmailReadOnly.Size = new System.Drawing.Size(100, 19);
             this.textEmailReadOnly.TabIndex = 4;
             this.textEmailReadOnly.Text = "Email:";
             this.textEmailReadOnly.Visible = false;
@@ -222,20 +222,20 @@
             // textUserEmail
             // 
             this.textUserEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textUserEmail.Location = new System.Drawing.Point(291, 122);
+            this.textUserEmail.Location = new System.Drawing.Point(327, 152);
             this.textUserEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textUserEmail.Name = "textUserEmail";
-            this.textUserEmail.Size = new System.Drawing.Size(228, 15);
+            this.textUserEmail.Size = new System.Drawing.Size(256, 19);
             this.textUserEmail.TabIndex = 7;
             this.textUserEmail.Visible = false;
             // 
             // textUserFullName
             // 
             this.textUserFullName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textUserFullName.Location = new System.Drawing.Point(291, 60);
+            this.textUserFullName.Location = new System.Drawing.Point(327, 75);
             this.textUserFullName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textUserFullName.Name = "textUserFullName";
-            this.textUserFullName.Size = new System.Drawing.Size(228, 15);
+            this.textUserFullName.Size = new System.Drawing.Size(256, 19);
             this.textUserFullName.TabIndex = 5;
             this.textUserFullName.Visible = false;
             // 
@@ -243,11 +243,11 @@
             // 
             this.textNameReadOnly.BackColor = System.Drawing.SystemColors.Window;
             this.textNameReadOnly.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textNameReadOnly.Location = new System.Drawing.Point(184, 60);
+            this.textNameReadOnly.Location = new System.Drawing.Point(207, 75);
             this.textNameReadOnly.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textNameReadOnly.Name = "textNameReadOnly";
             this.textNameReadOnly.ReadOnly = true;
-            this.textNameReadOnly.Size = new System.Drawing.Size(89, 15);
+            this.textNameReadOnly.Size = new System.Drawing.Size(100, 19);
             this.textNameReadOnly.TabIndex = 2;
             this.textNameReadOnly.Text = "Name:";
             this.textNameReadOnly.Visible = false;
@@ -256,11 +256,11 @@
             // 
             this.textBirthDayReadOnly.BackColor = System.Drawing.SystemColors.Window;
             this.textBirthDayReadOnly.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBirthDayReadOnly.Location = new System.Drawing.Point(184, 90);
+            this.textBirthDayReadOnly.Location = new System.Drawing.Point(207, 112);
             this.textBirthDayReadOnly.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBirthDayReadOnly.Name = "textBirthDayReadOnly";
             this.textBirthDayReadOnly.ReadOnly = true;
-            this.textBirthDayReadOnly.Size = new System.Drawing.Size(89, 15);
+            this.textBirthDayReadOnly.Size = new System.Drawing.Size(100, 19);
             this.textBirthDayReadOnly.TabIndex = 3;
             this.textBirthDayReadOnly.Text = "Date Of Birth:";
             this.textBirthDayReadOnly.Visible = false;
@@ -268,10 +268,10 @@
             // textUserBirthDay
             // 
             this.textUserBirthDay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textUserBirthDay.Location = new System.Drawing.Point(291, 90);
+            this.textUserBirthDay.Location = new System.Drawing.Point(327, 112);
             this.textUserBirthDay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textUserBirthDay.Name = "textUserBirthDay";
-            this.textUserBirthDay.Size = new System.Drawing.Size(228, 15);
+            this.textUserBirthDay.Size = new System.Drawing.Size(256, 19);
             this.textUserBirthDay.TabIndex = 6;
             this.textUserBirthDay.Visible = false;
             // 
@@ -287,11 +287,11 @@
             this.MatchFinderTab.Controls.Add(this.comboBoxMatchGender);
             this.MatchFinderTab.Controls.Add(this.labelMatchGender);
             this.MatchFinderTab.Controls.Add(this.labelMatchQuestion);
-            this.MatchFinderTab.Location = new System.Drawing.Point(4, 25);
+            this.MatchFinderTab.Location = new System.Drawing.Point(4, 29);
             this.MatchFinderTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MatchFinderTab.Name = "MatchFinderTab";
             this.MatchFinderTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MatchFinderTab.Size = new System.Drawing.Size(1022, 573);
+            this.MatchFinderTab.Size = new System.Drawing.Size(1151, 719);
             this.MatchFinderTab.TabIndex = 1;
             this.MatchFinderTab.Text = "MatchFinder";
             this.MatchFinderTab.UseVisualStyleBackColor = true;
@@ -306,45 +306,45 @@
             this.panelMatchDetails.Controls.Add(this.labelMatchFoundGender);
             this.panelMatchDetails.Controls.Add(this.labelMatchFoundName);
             this.panelMatchDetails.Controls.Add(this.pictureBoxMatch);
-            this.panelMatchDetails.Location = new System.Drawing.Point(789, 49);
+            this.panelMatchDetails.Location = new System.Drawing.Point(888, 61);
             this.panelMatchDetails.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMatchDetails.Name = "panelMatchDetails";
-            this.panelMatchDetails.Size = new System.Drawing.Size(196, 196);
+            this.panelMatchDetails.Size = new System.Drawing.Size(220, 245);
             this.panelMatchDetails.TabIndex = 9;
             // 
             // textBoxMatchFoundBday
             // 
             this.textBoxMatchFoundBday.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxMatchFoundBday.Location = new System.Drawing.Point(83, 159);
+            this.textBoxMatchFoundBday.Location = new System.Drawing.Point(93, 199);
             this.textBoxMatchFoundBday.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxMatchFoundBday.Name = "textBoxMatchFoundBday";
-            this.textBoxMatchFoundBday.Size = new System.Drawing.Size(110, 15);
+            this.textBoxMatchFoundBday.Size = new System.Drawing.Size(124, 19);
             this.textBoxMatchFoundBday.TabIndex = 6;
             // 
             // textBoxMatchFoundGender
             // 
             this.textBoxMatchFoundGender.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxMatchFoundGender.Location = new System.Drawing.Point(83, 130);
+            this.textBoxMatchFoundGender.Location = new System.Drawing.Point(93, 162);
             this.textBoxMatchFoundGender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxMatchFoundGender.Name = "textBoxMatchFoundGender";
-            this.textBoxMatchFoundGender.Size = new System.Drawing.Size(110, 15);
+            this.textBoxMatchFoundGender.Size = new System.Drawing.Size(124, 19);
             this.textBoxMatchFoundGender.TabIndex = 5;
             // 
             // textBoxMatchFoundName
             // 
             this.textBoxMatchFoundName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxMatchFoundName.Location = new System.Drawing.Point(83, 102);
+            this.textBoxMatchFoundName.Location = new System.Drawing.Point(93, 128);
             this.textBoxMatchFoundName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxMatchFoundName.Name = "textBoxMatchFoundName";
-            this.textBoxMatchFoundName.Size = new System.Drawing.Size(110, 15);
+            this.textBoxMatchFoundName.Size = new System.Drawing.Size(124, 19);
             this.textBoxMatchFoundName.TabIndex = 4;
             // 
             // labelMatchFoundBday
             // 
             this.labelMatchFoundBday.AutoSize = true;
-            this.labelMatchFoundBday.Location = new System.Drawing.Point(4, 159);
+            this.labelMatchFoundBday.Location = new System.Drawing.Point(4, 199);
             this.labelMatchFoundBday.Name = "labelMatchFoundBday";
-            this.labelMatchFoundBday.Size = new System.Drawing.Size(64, 17);
+            this.labelMatchFoundBday.Size = new System.Drawing.Size(71, 20);
             this.labelMatchFoundBday.TabIndex = 3;
             this.labelMatchFoundBday.Text = "Birthday:";
             this.labelMatchFoundBday.Visible = false;
@@ -352,9 +352,9 @@
             // labelMatchFoundGender
             // 
             this.labelMatchFoundGender.AutoSize = true;
-            this.labelMatchFoundGender.Location = new System.Drawing.Point(4, 130);
+            this.labelMatchFoundGender.Location = new System.Drawing.Point(4, 162);
             this.labelMatchFoundGender.Name = "labelMatchFoundGender";
-            this.labelMatchFoundGender.Size = new System.Drawing.Size(60, 17);
+            this.labelMatchFoundGender.Size = new System.Drawing.Size(67, 20);
             this.labelMatchFoundGender.TabIndex = 2;
             this.labelMatchFoundGender.Text = "Gender:";
             this.labelMatchFoundGender.Visible = false;
@@ -362,19 +362,19 @@
             // labelMatchFoundName
             // 
             this.labelMatchFoundName.AutoSize = true;
-            this.labelMatchFoundName.Location = new System.Drawing.Point(4, 102);
+            this.labelMatchFoundName.Location = new System.Drawing.Point(4, 128);
             this.labelMatchFoundName.Name = "labelMatchFoundName";
-            this.labelMatchFoundName.Size = new System.Drawing.Size(49, 17);
+            this.labelMatchFoundName.Size = new System.Drawing.Size(55, 20);
             this.labelMatchFoundName.TabIndex = 1;
             this.labelMatchFoundName.Text = "Name:";
             this.labelMatchFoundName.Visible = false;
             // 
             // pictureBoxMatch
             // 
-            this.pictureBoxMatch.Location = new System.Drawing.Point(4, 3);
+            this.pictureBoxMatch.Location = new System.Drawing.Point(4, 4);
             this.pictureBoxMatch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxMatch.Name = "pictureBoxMatch";
-            this.pictureBoxMatch.Size = new System.Drawing.Size(111, 88);
+            this.pictureBoxMatch.Size = new System.Drawing.Size(125, 110);
             this.pictureBoxMatch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxMatch.TabIndex = 0;
             this.pictureBoxMatch.TabStop = false;
@@ -383,19 +383,19 @@
             // 
             this.listBoxMatches.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.listBoxMatches.FormattingEnabled = true;
-            this.listBoxMatches.ItemHeight = 16;
-            this.listBoxMatches.Location = new System.Drawing.Point(411, 49);
+            this.listBoxMatches.ItemHeight = 20;
+            this.listBoxMatches.Location = new System.Drawing.Point(462, 61);
             this.listBoxMatches.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBoxMatches.Name = "listBoxMatches";
-            this.listBoxMatches.Size = new System.Drawing.Size(208, 196);
+            this.listBoxMatches.Size = new System.Drawing.Size(234, 244);
             this.listBoxMatches.TabIndex = 8;
             // 
             // buttonMatchFinder
             // 
-            this.buttonMatchFinder.Location = new System.Drawing.Point(53, 212);
+            this.buttonMatchFinder.Location = new System.Drawing.Point(60, 265);
             this.buttonMatchFinder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonMatchFinder.Name = "buttonMatchFinder";
-            this.buttonMatchFinder.Size = new System.Drawing.Size(182, 33);
+            this.buttonMatchFinder.Size = new System.Drawing.Size(205, 41);
             this.buttonMatchFinder.TabIndex = 7;
             this.buttonMatchFinder.Text = "Find me a match";
             this.buttonMatchFinder.UseVisualStyleBackColor = true;
@@ -403,35 +403,35 @@
             // 
             // numericUpDownMaxAge
             // 
-            this.numericUpDownMaxAge.Location = new System.Drawing.Point(186, 160);
+            this.numericUpDownMaxAge.Location = new System.Drawing.Point(209, 200);
             this.numericUpDownMaxAge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownMaxAge.Name = "numericUpDownMaxAge";
-            this.numericUpDownMaxAge.Size = new System.Drawing.Size(49, 22);
+            this.numericUpDownMaxAge.Size = new System.Drawing.Size(55, 26);
             this.numericUpDownMaxAge.TabIndex = 6;
             // 
             // numericUpDownMinAge
             // 
-            this.numericUpDownMinAge.Location = new System.Drawing.Point(186, 124);
+            this.numericUpDownMinAge.Location = new System.Drawing.Point(209, 155);
             this.numericUpDownMinAge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownMinAge.Name = "numericUpDownMinAge";
-            this.numericUpDownMinAge.Size = new System.Drawing.Size(49, 22);
+            this.numericUpDownMinAge.Size = new System.Drawing.Size(55, 26);
             this.numericUpDownMinAge.TabIndex = 5;
             // 
             // labelMatchMaxAge
             // 
             this.labelMatchMaxAge.AutoSize = true;
-            this.labelMatchMaxAge.Location = new System.Drawing.Point(50, 160);
+            this.labelMatchMaxAge.Location = new System.Drawing.Point(56, 200);
             this.labelMatchMaxAge.Name = "labelMatchMaxAge";
-            this.labelMatchMaxAge.Size = new System.Drawing.Size(98, 17);
+            this.labelMatchMaxAge.Size = new System.Drawing.Size(111, 20);
             this.labelMatchMaxAge.TabIndex = 4;
             this.labelMatchMaxAge.Text = "Maximum age:";
             // 
             // labelMatchMinAge
             // 
             this.labelMatchMinAge.AutoSize = true;
-            this.labelMatchMinAge.Location = new System.Drawing.Point(50, 124);
+            this.labelMatchMinAge.Location = new System.Drawing.Point(56, 155);
             this.labelMatchMinAge.Name = "labelMatchMinAge";
-            this.labelMatchMinAge.Size = new System.Drawing.Size(95, 17);
+            this.labelMatchMinAge.Size = new System.Drawing.Size(107, 20);
             this.labelMatchMinAge.TabIndex = 3;
             this.labelMatchMinAge.Text = "Minimum age:";
             // 
@@ -443,27 +443,27 @@
             "Male",
             "Female",
             "Both"});
-            this.comboBoxMatchGender.Location = new System.Drawing.Point(128, 84);
+            this.comboBoxMatchGender.Location = new System.Drawing.Point(144, 105);
             this.comboBoxMatchGender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxMatchGender.Name = "comboBoxMatchGender";
-            this.comboBoxMatchGender.Size = new System.Drawing.Size(108, 24);
+            this.comboBoxMatchGender.Size = new System.Drawing.Size(121, 28);
             this.comboBoxMatchGender.TabIndex = 2;
             // 
             // labelMatchGender
             // 
             this.labelMatchGender.AutoSize = true;
-            this.labelMatchGender.Location = new System.Drawing.Point(50, 86);
+            this.labelMatchGender.Location = new System.Drawing.Point(56, 108);
             this.labelMatchGender.Name = "labelMatchGender";
-            this.labelMatchGender.Size = new System.Drawing.Size(60, 17);
+            this.labelMatchGender.Size = new System.Drawing.Size(67, 20);
             this.labelMatchGender.TabIndex = 1;
             this.labelMatchGender.Text = "Gender:";
             // 
             // labelMatchQuestion
             // 
             this.labelMatchQuestion.AutoSize = true;
-            this.labelMatchQuestion.Location = new System.Drawing.Point(46, 49);
+            this.labelMatchQuestion.Location = new System.Drawing.Point(52, 61);
             this.labelMatchQuestion.Name = "labelMatchQuestion";
-            this.labelMatchQuestion.Size = new System.Drawing.Size(186, 17);
+            this.labelMatchQuestion.Size = new System.Drawing.Size(213, 20);
             this.labelMatchQuestion.TabIndex = 0;
             this.labelMatchQuestion.Text = "What Are You Interested In?";
             // 
@@ -477,37 +477,61 @@
             this.FriendsListTab.Controls.Add(this.listBoxFriendsList);
             this.FriendsListTab.Controls.Add(this.textBoxNumberOfFriends);
             this.FriendsListTab.Controls.Add(this.textBoxFriendsCounter);
-            this.FriendsListTab.Location = new System.Drawing.Point(4, 25);
+            this.FriendsListTab.Location = new System.Drawing.Point(4, 29);
             this.FriendsListTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FriendsListTab.Name = "FriendsListTab";
             this.FriendsListTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FriendsListTab.Size = new System.Drawing.Size(1022, 573);
+            this.FriendsListTab.Size = new System.Drawing.Size(1151, 719);
             this.FriendsListTab.TabIndex = 2;
             this.FriendsListTab.Text = "FriendsListTab";
             this.FriendsListTab.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(485, 434);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "label1";
+            // 
+            // textBoxFriendsListHeadLine
+            // 
+            this.textBoxFriendsListHeadLine.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxFriendsListHeadLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.textBoxFriendsListHeadLine.Location = new System.Drawing.Point(124, 26);
+            this.textBoxFriendsListHeadLine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxFriendsListHeadLine.Name = "textBoxFriendsListHeadLine";
+            this.textBoxFriendsListHeadLine.Size = new System.Drawing.Size(246, 37);
+            this.textBoxFriendsListHeadLine.TabIndex = 22;
+            this.textBoxFriendsListHeadLine.Text = "Desig\'s Friends";
+            this.textBoxFriendsListHeadLine.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxAlbumsHeadLine
             // 
             this.textBoxAlbumsHeadLine.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxAlbumsHeadLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.textBoxAlbumsHeadLine.Location = new System.Drawing.Point(625, 21);
+            this.textBoxAlbumsHeadLine.Location = new System.Drawing.Point(703, 26);
+            this.textBoxAlbumsHeadLine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxAlbumsHeadLine.Name = "textBoxAlbumsHeadLine";
-            this.textBoxAlbumsHeadLine.Size = new System.Drawing.Size(219, 31);
+            this.textBoxAlbumsHeadLine.Size = new System.Drawing.Size(246, 37);
             this.textBoxAlbumsHeadLine.TabIndex = 21;
             this.textBoxAlbumsHeadLine.Text = "Albums";
             this.textBoxAlbumsHeadLine.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // listViewSelectedAlbumPhotos
             // 
-            this.listViewSelectedAlbumPhotos.Location = new System.Drawing.Point(549, 73);
+            this.listViewSelectedAlbumPhotos.Location = new System.Drawing.Point(618, 91);
+            this.listViewSelectedAlbumPhotos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listViewSelectedAlbumPhotos.Name = "listViewSelectedAlbumPhotos";
-            this.listViewSelectedAlbumPhotos.Size = new System.Drawing.Size(389, 431);
+            this.listViewSelectedAlbumPhotos.Size = new System.Drawing.Size(437, 538);
             this.listViewSelectedAlbumPhotos.TabIndex = 20;
             this.listViewSelectedAlbumPhotos.UseCompatibleStateImageBehavior = false;
             // 
             // pictureBoxSelectedFriend
             // 
-            this.pictureBoxSelectedFriend.Location = new System.Drawing.Point(299, 112);
+            this.pictureBoxSelectedFriend.Location = new System.Drawing.Point(336, 140);
+            this.pictureBoxSelectedFriend.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxSelectedFriend.Name = "pictureBoxSelectedFriend";
             this.pictureBoxSelectedFriend.Size = new System.Drawing.Size(106, 88);
             this.pictureBoxSelectedFriend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -519,10 +543,11 @@
             this.listBoxFriendsList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.listBoxFriendsList.FormattingEnabled = true;
             this.listBoxFriendsList.HorizontalExtent = 10;
-            this.listBoxFriendsList.ItemHeight = 25;
-            this.listBoxFriendsList.Location = new System.Drawing.Point(9, 112);
+            this.listBoxFriendsList.ItemHeight = 29;
+            this.listBoxFriendsList.Location = new System.Drawing.Point(10, 140);
+            this.listBoxFriendsList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBoxFriendsList.Name = "listBoxFriendsList";
-            this.listBoxFriendsList.Size = new System.Drawing.Size(284, 204);
+            this.listBoxFriendsList.Size = new System.Drawing.Size(319, 236);
             this.listBoxFriendsList.TabIndex = 18;
             this.listBoxFriendsList.SelectedIndexChanged += new System.EventHandler(this.listBoxFriendsList_SelectedIndexChanged);
             // 
@@ -530,9 +555,10 @@
             // 
             this.textBoxNumberOfFriends.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNumberOfFriends.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.textBoxNumberOfFriends.Location = new System.Drawing.Point(9, 67);
+            this.textBoxNumberOfFriends.Location = new System.Drawing.Point(10, 84);
+            this.textBoxNumberOfFriends.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxNumberOfFriends.Name = "textBoxNumberOfFriends";
-            this.textBoxNumberOfFriends.Size = new System.Drawing.Size(191, 18);
+            this.textBoxNumberOfFriends.Size = new System.Drawing.Size(215, 22);
             this.textBoxNumberOfFriends.TabIndex = 15;
             this.textBoxNumberOfFriends.Text = "Total number of friends:";
             // 
@@ -540,42 +566,23 @@
             // 
             this.textBoxFriendsCounter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxFriendsCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.textBoxFriendsCounter.Location = new System.Drawing.Point(206, 67);
+            this.textBoxFriendsCounter.Location = new System.Drawing.Point(232, 84);
+            this.textBoxFriendsCounter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxFriendsCounter.Name = "textBoxFriendsCounter";
-            this.textBoxFriendsCounter.Size = new System.Drawing.Size(39, 18);
+            this.textBoxFriendsCounter.Size = new System.Drawing.Size(44, 22);
             this.textBoxFriendsCounter.TabIndex = 14;
             this.textBoxFriendsCounter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBoxFriendsListHeadLine
-            // 
-            this.textBoxFriendsListHeadLine.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxFriendsListHeadLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.textBoxFriendsListHeadLine.Location = new System.Drawing.Point(110, 21);
-            this.textBoxFriendsListHeadLine.Name = "textBoxFriendsListHeadLine";
-            this.textBoxFriendsListHeadLine.Size = new System.Drawing.Size(219, 31);
-            this.textBoxFriendsListHeadLine.TabIndex = 22;
-            this.textBoxFriendsListHeadLine.Text = "Desig\'s Friends";
-            this.textBoxFriendsListHeadLine.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(431, 347);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "label1";
-            // 
             // FaceBookMainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1030, 602);
+            this.ClientSize = new System.Drawing.Size(1159, 752);
             this.Controls.Add(this.tabsControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MaximumSize = new System.Drawing.Size(1069, 969);
-            this.MinimumSize = new System.Drawing.Size(713, 649);
+            this.MaximumSize = new System.Drawing.Size(1200, 1197);
+            this.MinimumSize = new System.Drawing.Size(799, 797);
             this.Name = "FaceBookMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FaceBook";

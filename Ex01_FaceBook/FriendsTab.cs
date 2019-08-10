@@ -85,8 +85,11 @@ namespace Ex01_FaceBook
         {
             try
             {
-                int selectedIndex = listViewSelectedAlbumPhotos.SelectedIndices[0];
-                label1.Text = m_LoggedInUser.Albums[selectedIndex].Name;
+                if (listViewSelectedAlbumPhotos.SelectedIndices.Count > 0)
+                {
+                    int selectedIndex = listViewSelectedAlbumPhotos.SelectedIndices[0];
+                    label1.Text = m_LoggedInUser.Albums[selectedIndex].Name;
+                }
             }
             catch (Exception ex)
             {
