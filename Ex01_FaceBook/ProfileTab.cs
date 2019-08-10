@@ -66,7 +66,15 @@ namespace Ex01_FaceBook
             onlyColumn.Text = "";
             onlyColumn.Width = listViewUserStatuses.Width - 20;
             listViewUserStatuses.Columns.Add(onlyColumn);
-            fillStatusesListViewByDate();
+            try
+            {
+                fillStatusesListViewByDate();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("an error aqured while trying to download your statuses",
+                    "Statuses Request Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void fillStatusesListViewByDate()

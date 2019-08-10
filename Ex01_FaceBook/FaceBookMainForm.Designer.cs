@@ -45,6 +45,7 @@
             this.textBirthDayReadOnly = new System.Windows.Forms.TextBox();
             this.textUserBirthDay = new System.Windows.Forms.TextBox();
             this.MatchFinderTab = new System.Windows.Forms.TabPage();
+            this.labelMatchesTitleReadOnly = new System.Windows.Forms.Label();
             this.panelMatchDetails = new System.Windows.Forms.Panel();
             this.textBoxMatchFoundBday = new System.Windows.Forms.TextBox();
             this.textBoxMatchFoundGender = new System.Windows.Forms.TextBox();
@@ -71,7 +72,6 @@
             this.listBoxFriendsList = new System.Windows.Forms.ListBox();
             this.textBoxNumberOfFriends = new System.Windows.Forms.TextBox();
             this.textBoxFriendsCounter = new System.Windows.Forms.TextBox();
-            this.labelMatchesTitleReadOnly = new System.Windows.Forms.Label();
             this.tabsControl.SuspendLayout();
             this.ProfileTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).BeginInit();
@@ -298,6 +298,16 @@
             this.MatchFinderTab.Text = "MatchFinder";
             this.MatchFinderTab.UseVisualStyleBackColor = true;
             // 
+            // labelMatchesTitleReadOnly
+            // 
+            this.labelMatchesTitleReadOnly.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelMatchesTitleReadOnly.AutoSize = true;
+            this.labelMatchesTitleReadOnly.Location = new System.Drawing.Point(540, 70);
+            this.labelMatchesTitleReadOnly.Name = "labelMatchesTitleReadOnly";
+            this.labelMatchesTitleReadOnly.Size = new System.Drawing.Size(74, 20);
+            this.labelMatchesTitleReadOnly.TabIndex = 7;
+            this.labelMatchesTitleReadOnly.Text = "Matches:";
+            // 
             // panelMatchDetails
             // 
             this.panelMatchDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -386,10 +396,10 @@
             this.listBoxMatches.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.listBoxMatches.FormattingEnabled = true;
             this.listBoxMatches.ItemHeight = 20;
-            this.listBoxMatches.Location = new System.Drawing.Point(462, 81);
+            this.listBoxMatches.Location = new System.Drawing.Point(462, 101);
             this.listBoxMatches.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBoxMatches.Name = "listBoxMatches";
-            this.listBoxMatches.Size = new System.Drawing.Size(234, 224);
+            this.listBoxMatches.Size = new System.Drawing.Size(234, 204);
             this.listBoxMatches.TabIndex = 8;
             // 
             // buttonMatchFinder
@@ -574,16 +584,6 @@
             this.textBoxFriendsCounter.Size = new System.Drawing.Size(44, 22);
             this.textBoxFriendsCounter.TabIndex = 14;
             this.textBoxFriendsCounter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // labelMatchesTitleReadOnly
-            // 
-            this.labelMatchesTitleReadOnly.AutoSize = true;
-            this.labelMatchesTitleReadOnly.Location = new System.Drawing.Point(540, 59);
-            this.labelMatchesTitleReadOnly.Name = "labelMatchesTitleReadOnly";
-            this.labelMatchesTitleReadOnly.Size = new System.Drawing.Size(74, 20);
-            this.labelMatchesTitleReadOnly.TabIndex = 7;
-            this.labelMatchesTitleReadOnly.Text = "Matches:";
-            this.labelMatchesTitleReadOnly.Visible = false;
             // 
             // FaceBookMainForm
             // 

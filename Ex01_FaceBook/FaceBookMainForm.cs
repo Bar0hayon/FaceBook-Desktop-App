@@ -120,25 +120,33 @@ namespace Ex01_FaceBook
 
         private void login()
         {
-            m_LoginResult = FacebookService.Login("1450160541956417", //(desig patter's "Design Patterns Course App 2.4" app)
-                "public_profile",
-                "email",
-                "groups_access_member_info",
-                "publish_to_groups",
-                "user_age_range",
-                "user_birthday",
-                "user_events",
-                "user_friends",
-                "user_gender",
-                "user_hometown",
-                "user_likes",
-                "user_link",
-                "user_location",
-                "user_photos",
-                "user_posts",
-                "user_tagged_places",
-                "user_videos"
-                );
+            try
+            {
+                m_LoginResult = FacebookService.Login("1450160541956417", //(desig patter's "Design Patterns Course App 2.4" app)
+                    "public_profile",
+                    "email",
+                    "groups_access_member_info",
+                    "publish_to_groups",
+                    "user_age_range",
+                    "user_birthday",
+                    "user_events",
+                    "user_friends",
+                    "user_gender",
+                    "user_hometown",
+                    "user_likes",
+                    "user_link",
+                    "user_location",
+                    "user_photos",
+                    "user_posts",
+                    "user_tagged_places",
+                    "user_videos"
+                    );
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("an Error aqured while trying to connect to the facebook servers, please try again later",
+                    "Login Request Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
