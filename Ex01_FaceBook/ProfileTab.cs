@@ -60,6 +60,8 @@ namespace Ex01_FaceBook
 
         private void fetchUserStatuses()
         {
+            comboBoxStatusesSort.Visible = true;
+            listViewUserStatuses.Visible = true;
             ColumnHeader onlyColumn = new ColumnHeader();
             onlyColumn.Text = "";
             onlyColumn.Width = listViewUserStatuses.Width - 20;

@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Serialization;
 
 namespace Ex01_FaceBook
@@ -19,11 +20,11 @@ namespace Ex01_FaceBook
 
         public void LoadData()
         {
-            if(System.IO.File.Exists(r_filePath))
+            try
             {
                 loadFromFile();
             }
-            else
+            catch(Exception ex)
             {
                 getDefaultValues();
             }
@@ -36,18 +37,6 @@ namespace Ex01_FaceBook
                 XmlSerializer serializer = new XmlSerializer(this.GetType());
                 serializer.Serialize(stream, this);
             }
-        }
-
-        public static AppSettings LoadFromFile()
-        {
-            AppSettings obj = null;
-            using (Stream stream = new FileStream("..\\appSettings.xml",FileMode.Open))
-            {
-                XmlSerializer serializer = new XmlSerializer(typeof(AppSettings));
-                obj = serializer.Deserialize(stream) as AppSettings;
-            }
-
-            return obj;
         }
 
         private void loadFromFile()
@@ -71,7 +60,7 @@ namespace Ex01_FaceBook
         private void getDefaultValues()
         {
             LastWindowLocation = new Point(50, 50);
-            LastWindowSize = new Size(1000, 600);
+            LastWindowSize = new Size(1000, 800);
             RememberUser = false;
             LastAccessToken = null;
         }

@@ -92,6 +92,29 @@ namespace Ex01_FaceBook
             v_LoggedIn = false;
             buttonLoginLogout.Text = "Login";
             ///////move all the profile info to invisible!!************
+            //profile
+            pictureProfile.Visible = false;
+            textNameReadOnly.Visible =     false;
+            textEmailReadOnly.Visible =    false;
+            textGenderReadOnly.Visible =   false;
+            textUserFullName.Visible =     false;
+            textUserBirthDay.Visible =     false;
+            textUserEmail.Visible =        false;
+            textUserGender.Visible =       false;
+            comboBoxStatusesSort.Visible = false;
+            textBirthDayReadOnly.Visible = false;
+            //statuses
+            comboBoxStatusesSort.Visible = false;
+            listViewUserStatuses.Visible = false;
+            //matchFinder
+            pictureBoxMatch.Visible = false;
+            textBoxMatchFoundBday.Visible = false;
+            textBoxMatchFoundGender.Visible = false;
+            textBoxMatchFoundName.Visible = false;
+            labelMatchFoundBday.Visible = false;
+            labelMatchFoundGender.Visible = false;
+            labelMatchFoundName.Visible = false;
+            listBoxMatches.Items.Clear();
         }
 
         private void login()
