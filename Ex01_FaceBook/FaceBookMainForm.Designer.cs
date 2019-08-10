@@ -71,6 +71,7 @@
             this.listBoxFriendsList = new System.Windows.Forms.ListBox();
             this.textBoxNumberOfFriends = new System.Windows.Forms.TextBox();
             this.textBoxFriendsCounter = new System.Windows.Forms.TextBox();
+            this.labelMatchesTitleReadOnly = new System.Windows.Forms.Label();
             this.tabsControl.SuspendLayout();
             this.ProfileTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).BeginInit();
@@ -277,6 +278,7 @@
             // 
             // MatchFinderTab
             // 
+            this.MatchFinderTab.Controls.Add(this.labelMatchesTitleReadOnly);
             this.MatchFinderTab.Controls.Add(this.panelMatchDetails);
             this.MatchFinderTab.Controls.Add(this.listBoxMatches);
             this.MatchFinderTab.Controls.Add(this.buttonMatchFinder);
@@ -384,10 +386,10 @@
             this.listBoxMatches.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.listBoxMatches.FormattingEnabled = true;
             this.listBoxMatches.ItemHeight = 20;
-            this.listBoxMatches.Location = new System.Drawing.Point(462, 61);
+            this.listBoxMatches.Location = new System.Drawing.Point(462, 81);
             this.listBoxMatches.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBoxMatches.Name = "listBoxMatches";
-            this.listBoxMatches.Size = new System.Drawing.Size(234, 244);
+            this.listBoxMatches.Size = new System.Drawing.Size(234, 224);
             this.listBoxMatches.TabIndex = 8;
             // 
             // buttonMatchFinder
@@ -573,6 +575,16 @@
             this.textBoxFriendsCounter.TabIndex = 14;
             this.textBoxFriendsCounter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // labelMatchesTitleReadOnly
+            // 
+            this.labelMatchesTitleReadOnly.AutoSize = true;
+            this.labelMatchesTitleReadOnly.Location = new System.Drawing.Point(540, 59);
+            this.labelMatchesTitleReadOnly.Name = "labelMatchesTitleReadOnly";
+            this.labelMatchesTitleReadOnly.Size = new System.Drawing.Size(74, 20);
+            this.labelMatchesTitleReadOnly.TabIndex = 7;
+            this.labelMatchesTitleReadOnly.Text = "Matches:";
+            this.labelMatchesTitleReadOnly.Visible = false;
+            // 
             // FaceBookMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -648,6 +660,7 @@
         private System.Windows.Forms.TextBox textBoxAlbumsHeadLine;
         private System.Windows.Forms.TextBox textBoxFriendsListHeadLine;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelMatchesTitleReadOnly;
     }
 }
 
