@@ -83,12 +83,29 @@ namespace Ex01_FaceBook
 
         private void ListViewSelectedAlbumPhotos_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
+            int albumIndex = 0;
+            m_ImageList.ImageSize = new Size(40, 40);
             try
             {
                 if (listViewSelectedAlbumPhotos.SelectedIndices.Count > 0)
                 {
+                    listView1.Clear();
                     int selectedIndex = listViewSelectedAlbumPhotos.SelectedIndices[0];
-                    label1.Text = m_LoggedInUser.Albums[selectedIndex].Name;
+                    for (int i = 0; i <m_LoggedInUser.Albums[selectedIndex].Count; i++)
+                    {
+                        m_ImageListUrls.Add(m_LoggedInUser.Albums[selectedIndex].PictureSmallURL);
+
+                        WebClient fetchImageUsingUrl = new WebClient();
+                        byte[] imageByte = fetchImageUsingUrl.DownloadData(m_ImageListUrls[albumIndex]);
+                        MemoryStream stream = new MemoryStream(imageByte);
+
+                        Image newImage = Image.FromStream(stream);
+                        m_ImageList.Images.Add(newImage);
+
+                        listView1.Items.Add("", albumIndex);
+                        albumIndex++;
+                    }
+                    listView1.LargeImageList = m_ImageList;
                 }
             }
             catch (Exception ex)
