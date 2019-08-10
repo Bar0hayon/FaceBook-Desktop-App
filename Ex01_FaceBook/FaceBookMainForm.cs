@@ -61,7 +61,8 @@ namespace Ex01_FaceBook
             {
                 m_LoggedInUser = m_LoginResult.LoggedInUser;
                 fetchProfile();
-                //fetchFriendsList();
+                fetchFriendsList();
+                fetchAlbumsList();
             }
             else
             {
