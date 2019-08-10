@@ -93,6 +93,7 @@ namespace Ex01_FaceBook
                     int selectedIndex = listViewSelectedAlbumPhotos.SelectedIndices[0];
                     for (int i = 0; i <m_LoggedInUser.Albums[selectedIndex].Count; i++)
                     {
+                        fetchAlbumData(selectedIndex);
                         m_ImageListUrls.Add(m_LoggedInUser.Albums[selectedIndex].PictureSmallURL);
 
                         WebClient fetchImageUsingUrl = new WebClient();
@@ -112,6 +113,18 @@ namespace Ex01_FaceBook
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void fetchAlbumData(int i_AlbumIndex)
+        {
+            textBoxAlbumCommentsCount.Text =
+                m_LoggedInUser.Albums[i_AlbumIndex].Comments.Count.ToString();
+            textBoxAlbumCreationTime.Text =
+                m_LoggedInUser.Albums[i_AlbumIndex].CreatedTime.ToString();
+            textBoxAlbumLikesCount.Text =
+                m_LoggedInUser.Albums[i_AlbumIndex].LikedBy.Count.ToString();
+            textBoxAlbumOwner.Text =
+                m_LoggedInUser.Albums[i_AlbumIndex].From.Name;
         }
     }
 }
