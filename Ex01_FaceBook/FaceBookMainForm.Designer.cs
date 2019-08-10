@@ -63,12 +63,13 @@
             this.labelMatchGender = new System.Windows.Forms.Label();
             this.labelMatchQuestion = new System.Windows.Forms.Label();
             this.FriendsListTab = new System.Windows.Forms.TabPage();
+            this.textBoxAlbumsHeadLine = new System.Windows.Forms.TextBox();
+            this.listViewSelectedAlbumPhotos = new System.Windows.Forms.ListView();
+            this.pictureBoxSelectedFriend = new System.Windows.Forms.PictureBox();
+            this.listBoxFriendsList = new System.Windows.Forms.ListBox();
             this.textBoxNumberOfFriends = new System.Windows.Forms.TextBox();
             this.textBoxFriendsCounter = new System.Windows.Forms.TextBox();
-            this.listBoxFriendsList = new System.Windows.Forms.ListBox();
-            this.pictureBoxSelectedFriend = new System.Windows.Forms.PictureBox();
-            this.listViewSelectedAlbumPhotos = new System.Windows.Forms.ListView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxFriendsListHeadLine = new System.Windows.Forms.TextBox();
             this.tabsControl.SuspendLayout();
             this.ProfileTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).BeginInit();
@@ -91,7 +92,7 @@
             this.tabsControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabsControl.Name = "tabsControl";
             this.tabsControl.SelectedIndex = 0;
-            this.tabsControl.Size = new System.Drawing.Size(869, 602);
+            this.tabsControl.Size = new System.Drawing.Size(1030, 602);
             this.tabsControl.TabIndex = 0;
             // 
             // ProfileTab
@@ -113,7 +114,7 @@
             this.ProfileTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ProfileTab.Name = "ProfileTab";
             this.ProfileTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ProfileTab.Size = new System.Drawing.Size(861, 573);
+            this.ProfileTab.Size = new System.Drawing.Size(1022, 573);
             this.ProfileTab.TabIndex = 0;
             this.ProfileTab.Text = "Profile";
             this.ProfileTab.UseVisualStyleBackColor = true;
@@ -122,6 +123,7 @@
             // 
             this.comboBoxStatusesSort.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.comboBoxStatusesSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxStatusesSort.Items.AddRange(new object[] {
             "Upload Date - most recent",
             "Number of likes",
@@ -131,7 +133,6 @@
             this.comboBoxStatusesSort.Name = "comboBoxStatusesSort";
             this.comboBoxStatusesSort.Size = new System.Drawing.Size(197, 24);
             this.comboBoxStatusesSort.TabIndex = 13;
-            this.comboBoxStatusesSort.Text = "Sort Statuses by";
             this.comboBoxStatusesSort.Visible = false;
             // 
             // checkBoxRememberMe
@@ -155,7 +156,7 @@
             this.listViewUserStatuses.Location = new System.Drawing.Point(4, 237);
             this.listViewUserStatuses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listViewUserStatuses.Name = "listViewUserStatuses";
-            this.listViewUserStatuses.Size = new System.Drawing.Size(905, 192);
+            this.listViewUserStatuses.Size = new System.Drawing.Size(1066, 192);
             this.listViewUserStatuses.TabIndex = 10;
             this.listViewUserStatuses.UseCompatibleStateImageBehavior = false;
             this.listViewUserStatuses.View = System.Windows.Forms.View.Details;
@@ -289,7 +290,7 @@
             this.MatchFinderTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MatchFinderTab.Name = "MatchFinderTab";
             this.MatchFinderTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MatchFinderTab.Size = new System.Drawing.Size(861, 566);
+            this.MatchFinderTab.Size = new System.Drawing.Size(1022, 573);
             this.MatchFinderTab.TabIndex = 1;
             this.MatchFinderTab.Text = "MatchFinder";
             this.MatchFinderTab.UseVisualStyleBackColor = true;
@@ -304,7 +305,7 @@
             this.panelMatchDetails.Controls.Add(this.labelMatchFoundGender);
             this.panelMatchDetails.Controls.Add(this.labelMatchFoundName);
             this.panelMatchDetails.Controls.Add(this.pictureBoxMatch);
-            this.panelMatchDetails.Location = new System.Drawing.Point(628, 49);
+            this.panelMatchDetails.Location = new System.Drawing.Point(789, 49);
             this.panelMatchDetails.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMatchDetails.Name = "panelMatchDetails";
             this.panelMatchDetails.Size = new System.Drawing.Size(196, 196);
@@ -382,7 +383,7 @@
             this.listBoxMatches.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.listBoxMatches.FormattingEnabled = true;
             this.listBoxMatches.ItemHeight = 16;
-            this.listBoxMatches.Location = new System.Drawing.Point(330, 49);
+            this.listBoxMatches.Location = new System.Drawing.Point(411, 49);
             this.listBoxMatches.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBoxMatches.Name = "listBoxMatches";
             this.listBoxMatches.Size = new System.Drawing.Size(208, 196);
@@ -435,6 +436,7 @@
             // 
             // comboBoxMatchGender
             // 
+            this.comboBoxMatchGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMatchGender.FormattingEnabled = true;
             this.comboBoxMatchGender.Items.AddRange(new object[] {
             "Male",
@@ -466,7 +468,8 @@
             // 
             // FriendsListTab
             // 
-            this.FriendsListTab.Controls.Add(this.textBox1);
+            this.FriendsListTab.Controls.Add(this.textBoxFriendsListHeadLine);
+            this.FriendsListTab.Controls.Add(this.textBoxAlbumsHeadLine);
             this.FriendsListTab.Controls.Add(this.listViewSelectedAlbumPhotos);
             this.FriendsListTab.Controls.Add(this.pictureBoxSelectedFriend);
             this.FriendsListTab.Controls.Add(this.listBoxFriendsList);
@@ -476,16 +479,56 @@
             this.FriendsListTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FriendsListTab.Name = "FriendsListTab";
             this.FriendsListTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FriendsListTab.Size = new System.Drawing.Size(861, 573);
+            this.FriendsListTab.Size = new System.Drawing.Size(1022, 573);
             this.FriendsListTab.TabIndex = 2;
             this.FriendsListTab.Text = "FriendsListTab";
             this.FriendsListTab.UseVisualStyleBackColor = true;
+            // 
+            // textBoxAlbumsHeadLine
+            // 
+            this.textBoxAlbumsHeadLine.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAlbumsHeadLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.textBoxAlbumsHeadLine.Location = new System.Drawing.Point(625, 21);
+            this.textBoxAlbumsHeadLine.Name = "textBoxAlbumsHeadLine";
+            this.textBoxAlbumsHeadLine.Size = new System.Drawing.Size(219, 31);
+            this.textBoxAlbumsHeadLine.TabIndex = 21;
+            this.textBoxAlbumsHeadLine.Text = "Albums";
+            this.textBoxAlbumsHeadLine.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // listViewSelectedAlbumPhotos
+            // 
+            this.listViewSelectedAlbumPhotos.Location = new System.Drawing.Point(549, 73);
+            this.listViewSelectedAlbumPhotos.Name = "listViewSelectedAlbumPhotos";
+            this.listViewSelectedAlbumPhotos.Size = new System.Drawing.Size(389, 431);
+            this.listViewSelectedAlbumPhotos.TabIndex = 20;
+            this.listViewSelectedAlbumPhotos.UseCompatibleStateImageBehavior = false;
+            // 
+            // pictureBoxSelectedFriend
+            // 
+            this.pictureBoxSelectedFriend.Location = new System.Drawing.Point(299, 112);
+            this.pictureBoxSelectedFriend.Name = "pictureBoxSelectedFriend";
+            this.pictureBoxSelectedFriend.Size = new System.Drawing.Size(106, 88);
+            this.pictureBoxSelectedFriend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxSelectedFriend.TabIndex = 19;
+            this.pictureBoxSelectedFriend.TabStop = false;
+            // 
+            // listBoxFriendsList
+            // 
+            this.listBoxFriendsList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.listBoxFriendsList.FormattingEnabled = true;
+            this.listBoxFriendsList.HorizontalExtent = 10;
+            this.listBoxFriendsList.ItemHeight = 25;
+            this.listBoxFriendsList.Location = new System.Drawing.Point(9, 112);
+            this.listBoxFriendsList.Name = "listBoxFriendsList";
+            this.listBoxFriendsList.Size = new System.Drawing.Size(284, 204);
+            this.listBoxFriendsList.TabIndex = 18;
+            this.listBoxFriendsList.SelectedIndexChanged += new System.EventHandler(this.listBoxFriendsList_SelectedIndexChanged);
             // 
             // textBoxNumberOfFriends
             // 
             this.textBoxNumberOfFriends.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNumberOfFriends.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.textBoxNumberOfFriends.Location = new System.Drawing.Point(8, 21);
+            this.textBoxNumberOfFriends.Location = new System.Drawing.Point(9, 67);
             this.textBoxNumberOfFriends.Name = "textBoxNumberOfFriends";
             this.textBoxNumberOfFriends.Size = new System.Drawing.Size(191, 18);
             this.textBoxNumberOfFriends.TabIndex = 15;
@@ -495,55 +538,28 @@
             // 
             this.textBoxFriendsCounter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxFriendsCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.textBoxFriendsCounter.Location = new System.Drawing.Point(205, 21);
+            this.textBoxFriendsCounter.Location = new System.Drawing.Point(206, 67);
             this.textBoxFriendsCounter.Name = "textBoxFriendsCounter";
             this.textBoxFriendsCounter.Size = new System.Drawing.Size(39, 18);
             this.textBoxFriendsCounter.TabIndex = 14;
             this.textBoxFriendsCounter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // listBoxFriendsList
+            // textBoxFriendsListHeadLine
             // 
-            this.listBoxFriendsList.FormattingEnabled = true;
-            this.listBoxFriendsList.ItemHeight = 16;
-            this.listBoxFriendsList.Location = new System.Drawing.Point(8, 66);
-            this.listBoxFriendsList.Name = "listBoxFriendsList";
-            this.listBoxFriendsList.Size = new System.Drawing.Size(284, 148);
-            this.listBoxFriendsList.TabIndex = 18;
-            this.listBoxFriendsList.SelectedIndexChanged += new System.EventHandler(this.listBoxFriendsList_SelectedIndexChanged);
-            // 
-            // pictureBoxSelectedFriend
-            // 
-            this.pictureBoxSelectedFriend.Location = new System.Drawing.Point(313, 66);
-            this.pictureBoxSelectedFriend.Name = "pictureBoxSelectedFriend";
-            this.pictureBoxSelectedFriend.Size = new System.Drawing.Size(106, 88);
-            this.pictureBoxSelectedFriend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBoxSelectedFriend.TabIndex = 19;
-            this.pictureBoxSelectedFriend.TabStop = false;
-            // 
-            // listViewSelectedAlbumPhotos
-            // 
-            this.listViewSelectedAlbumPhotos.Location = new System.Drawing.Point(463, 102);
-            this.listViewSelectedAlbumPhotos.Name = "listViewSelectedAlbumPhotos";
-            this.listViewSelectedAlbumPhotos.Size = new System.Drawing.Size(343, 232);
-            this.listViewSelectedAlbumPhotos.TabIndex = 20;
-            this.listViewSelectedAlbumPhotos.UseCompatibleStateImageBehavior = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.textBox1.Location = new System.Drawing.Point(513, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(219, 31);
-            this.textBox1.TabIndex = 21;
-            this.textBox1.Text = "Albums";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxFriendsListHeadLine.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxFriendsListHeadLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.textBoxFriendsListHeadLine.Location = new System.Drawing.Point(110, 21);
+            this.textBoxFriendsListHeadLine.Name = "textBoxFriendsListHeadLine";
+            this.textBoxFriendsListHeadLine.Size = new System.Drawing.Size(219, 31);
+            this.textBoxFriendsListHeadLine.TabIndex = 22;
+            this.textBoxFriendsListHeadLine.Text = "Desig\'s Friends";
+            this.textBoxFriendsListHeadLine.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FaceBookMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 602);
+            this.ClientSize = new System.Drawing.Size(1030, 602);
             this.Controls.Add(this.tabsControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -611,7 +627,8 @@
         private System.Windows.Forms.ListBox listBoxFriendsList;
         private System.Windows.Forms.PictureBox pictureBoxSelectedFriend;
         private System.Windows.Forms.ListView listViewSelectedAlbumPhotos;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxAlbumsHeadLine;
+        private System.Windows.Forms.TextBox textBoxFriendsListHeadLine;
     }
 }
 

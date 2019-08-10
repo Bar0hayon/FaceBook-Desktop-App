@@ -41,9 +41,9 @@ namespace Ex01_FaceBook
             if (listBoxFriendsList.SelectedItems.Count == 1)
             {
                 User selectedFriend = listBoxFriendsList.SelectedItem as User;
-                if (selectedFriend.PictureSqaureURL != null)
+                if (selectedFriend.PictureNormalURL != null)
                 {
-                    pictureBoxSelectedFriend.LoadAsync(selectedFriend.PictureSqaureURL);
+                    pictureBoxSelectedFriend.LoadAsync(selectedFriend.PictureNormalURL);
                 }
                 else
                 {
