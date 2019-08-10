@@ -44,22 +44,34 @@
             this.textNameReadOnly = new System.Windows.Forms.TextBox();
             this.textBirthDayReadOnly = new System.Windows.Forms.TextBox();
             this.textUserBirthDay = new System.Windows.Forms.TextBox();
-            this.FeedTab = new System.Windows.Forms.TabPage();
+            this.MatchFinderTab = new System.Windows.Forms.TabPage();
+            this.buttonMatchFinder = new System.Windows.Forms.Button();
+            this.numericUpDownMaxAge = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownMinAge = new System.Windows.Forms.NumericUpDown();
+            this.labelMatchMaxAge = new System.Windows.Forms.Label();
+            this.labelMatchMinAge = new System.Windows.Forms.Label();
+            this.comboBoxMatchGender = new System.Windows.Forms.ComboBox();
+            this.labelMatchGender = new System.Windows.Forms.Label();
+            this.labelMatchQuestion = new System.Windows.Forms.Label();
             this.FriendsListTab = new System.Windows.Forms.TabPage();
             this.listViewFriendsList = new System.Windows.Forms.ListView();
             this.friendColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBoxNumberOfFriends = new System.Windows.Forms.TextBox();
             this.textBoxFriendsCounter = new System.Windows.Forms.TextBox();
+            this.listBoxMatches = new System.Windows.Forms.ListBox();
             this.tabsControl.SuspendLayout();
             this.ProfileTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).BeginInit();
+            this.MatchFinderTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxAge)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinAge)).BeginInit();
             this.FriendsListTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabsControl
             // 
             this.tabsControl.Controls.Add(this.ProfileTab);
-            this.tabsControl.Controls.Add(this.FeedTab);
+            this.tabsControl.Controls.Add(this.MatchFinderTab);
             this.tabsControl.Controls.Add(this.FriendsListTab);
             this.tabsControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabsControl.Location = new System.Drawing.Point(0, 0);
@@ -246,16 +258,97 @@
             this.textUserBirthDay.TabIndex = 6;
             this.textUserBirthDay.Visible = false;
             // 
-            // FeedTab
+            // MatchFinderTab
             // 
-            this.FeedTab.Location = new System.Drawing.Point(4, 29);
-            this.FeedTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FeedTab.Name = "FeedTab";
-            this.FeedTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FeedTab.Size = new System.Drawing.Size(1030, 539);
-            this.FeedTab.TabIndex = 1;
-            this.FeedTab.Text = "Feed";
-            this.FeedTab.UseVisualStyleBackColor = true;
+            this.MatchFinderTab.Controls.Add(this.listBoxMatches);
+            this.MatchFinderTab.Controls.Add(this.buttonMatchFinder);
+            this.MatchFinderTab.Controls.Add(this.numericUpDownMaxAge);
+            this.MatchFinderTab.Controls.Add(this.numericUpDownMinAge);
+            this.MatchFinderTab.Controls.Add(this.labelMatchMaxAge);
+            this.MatchFinderTab.Controls.Add(this.labelMatchMinAge);
+            this.MatchFinderTab.Controls.Add(this.comboBoxMatchGender);
+            this.MatchFinderTab.Controls.Add(this.labelMatchGender);
+            this.MatchFinderTab.Controls.Add(this.labelMatchQuestion);
+            this.MatchFinderTab.Location = new System.Drawing.Point(4, 29);
+            this.MatchFinderTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MatchFinderTab.Name = "MatchFinderTab";
+            this.MatchFinderTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MatchFinderTab.Size = new System.Drawing.Size(1030, 539);
+            this.MatchFinderTab.TabIndex = 1;
+            this.MatchFinderTab.Text = "MatchFinder";
+            this.MatchFinderTab.UseVisualStyleBackColor = true;
+            // 
+            // buttonMatchFinder
+            // 
+            this.buttonMatchFinder.Location = new System.Drawing.Point(114, 265);
+            this.buttonMatchFinder.Name = "buttonMatchFinder";
+            this.buttonMatchFinder.Size = new System.Drawing.Size(205, 41);
+            this.buttonMatchFinder.TabIndex = 7;
+            this.buttonMatchFinder.Text = "Find me a match";
+            this.buttonMatchFinder.UseVisualStyleBackColor = true;
+            this.buttonMatchFinder.Click += new System.EventHandler(this.ButtonMatchFinder_Click);
+            // 
+            // numericUpDownMaxAge
+            // 
+            this.numericUpDownMaxAge.Location = new System.Drawing.Point(263, 200);
+            this.numericUpDownMaxAge.Name = "numericUpDownMaxAge";
+            this.numericUpDownMaxAge.Size = new System.Drawing.Size(55, 26);
+            this.numericUpDownMaxAge.TabIndex = 6;
+            // 
+            // numericUpDownMinAge
+            // 
+            this.numericUpDownMinAge.Location = new System.Drawing.Point(263, 155);
+            this.numericUpDownMinAge.Name = "numericUpDownMinAge";
+            this.numericUpDownMinAge.Size = new System.Drawing.Size(55, 26);
+            this.numericUpDownMinAge.TabIndex = 5;
+            // 
+            // labelMatchMaxAge
+            // 
+            this.labelMatchMaxAge.AutoSize = true;
+            this.labelMatchMaxAge.Location = new System.Drawing.Point(110, 200);
+            this.labelMatchMaxAge.Name = "labelMatchMaxAge";
+            this.labelMatchMaxAge.Size = new System.Drawing.Size(111, 20);
+            this.labelMatchMaxAge.TabIndex = 4;
+            this.labelMatchMaxAge.Text = "Maximum age:";
+            // 
+            // labelMatchMinAge
+            // 
+            this.labelMatchMinAge.AutoSize = true;
+            this.labelMatchMinAge.Location = new System.Drawing.Point(110, 155);
+            this.labelMatchMinAge.Name = "labelMatchMinAge";
+            this.labelMatchMinAge.Size = new System.Drawing.Size(107, 20);
+            this.labelMatchMinAge.TabIndex = 3;
+            this.labelMatchMinAge.Text = "Minimum age:";
+            // 
+            // comboBoxMatchGender
+            // 
+            this.comboBoxMatchGender.FormattingEnabled = true;
+            this.comboBoxMatchGender.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Both"});
+            this.comboBoxMatchGender.Location = new System.Drawing.Point(198, 105);
+            this.comboBoxMatchGender.Name = "comboBoxMatchGender";
+            this.comboBoxMatchGender.Size = new System.Drawing.Size(121, 28);
+            this.comboBoxMatchGender.TabIndex = 2;
+            // 
+            // labelMatchGender
+            // 
+            this.labelMatchGender.AutoSize = true;
+            this.labelMatchGender.Location = new System.Drawing.Point(110, 108);
+            this.labelMatchGender.Name = "labelMatchGender";
+            this.labelMatchGender.Size = new System.Drawing.Size(67, 20);
+            this.labelMatchGender.TabIndex = 1;
+            this.labelMatchGender.Text = "Gender:";
+            // 
+            // labelMatchQuestion
+            // 
+            this.labelMatchQuestion.AutoSize = true;
+            this.labelMatchQuestion.Location = new System.Drawing.Point(106, 61);
+            this.labelMatchQuestion.Name = "labelMatchQuestion";
+            this.labelMatchQuestion.Size = new System.Drawing.Size(213, 20);
+            this.labelMatchQuestion.TabIndex = 0;
+            this.labelMatchQuestion.Text = "What Are You Interested In?";
             // 
             // FriendsListTab
             // 
@@ -313,6 +406,15 @@
             this.textBoxFriendsCounter.TabIndex = 14;
             this.textBoxFriendsCounter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // listBoxMatches
+            // 
+            this.listBoxMatches.FormattingEnabled = true;
+            this.listBoxMatches.ItemHeight = 20;
+            this.listBoxMatches.Location = new System.Drawing.Point(465, 61);
+            this.listBoxMatches.Name = "listBoxMatches";
+            this.listBoxMatches.Size = new System.Drawing.Size(233, 244);
+            this.listBoxMatches.TabIndex = 8;
+            // 
             // FaceBookMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -328,6 +430,10 @@
             this.ProfileTab.ResumeLayout(false);
             this.ProfileTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).EndInit();
+            this.MatchFinderTab.ResumeLayout(false);
+            this.MatchFinderTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxAge)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinAge)).EndInit();
             this.FriendsListTab.ResumeLayout(false);
             this.FriendsListTab.PerformLayout();
             this.ResumeLayout(false);
@@ -337,7 +443,7 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabsControl;
-        private System.Windows.Forms.TabPage FeedTab;
+        private System.Windows.Forms.TabPage MatchFinderTab;
         private System.Windows.Forms.TabPage FriendsListTab;
         private System.Windows.Forms.TextBox textBoxFriendsCounter;
         private System.Windows.Forms.TextBox textBoxNumberOfFriends;
@@ -357,6 +463,15 @@
         private System.Windows.Forms.PictureBox pictureProfile;
         private System.Windows.Forms.Button buttonLoginLogout;
         private System.Windows.Forms.ComboBox comboBoxStatusesSort;
+        private System.Windows.Forms.Button buttonMatchFinder;
+        private System.Windows.Forms.NumericUpDown numericUpDownMaxAge;
+        private System.Windows.Forms.NumericUpDown numericUpDownMinAge;
+        private System.Windows.Forms.Label labelMatchMaxAge;
+        private System.Windows.Forms.Label labelMatchMinAge;
+        private System.Windows.Forms.ComboBox comboBoxMatchGender;
+        private System.Windows.Forms.Label labelMatchGender;
+        private System.Windows.Forms.Label labelMatchQuestion;
+        private System.Windows.Forms.ListBox listBoxMatches;
     }
 }
 
