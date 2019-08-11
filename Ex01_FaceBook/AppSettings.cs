@@ -13,9 +13,13 @@ namespace Ex01_FaceBook
     public class AppSettings
     {
         public Point LastWindowLocation { get; set; }
+
         public Size LastWindowSize { get; set; }
+
         public bool RememberUser { get; set; }
+
         public string LastAccessToken { get; set; }
+
         private readonly string r_filePath = "..\\..\\appSettings.xml";
 
         public void LoadData()
@@ -24,7 +28,7 @@ namespace Ex01_FaceBook
             {
                 loadFromFile();
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 getDefaultValues();
             }

@@ -1,9 +1,9 @@
-﻿using FacebookWrapper.ObjectModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FacebookWrapper.ObjectModel;
 
 namespace Ex01_FaceBook
 {
@@ -15,7 +15,7 @@ namespace Ex01_FaceBook
             Status[] sortedStatuses = getStatusesAsArray(i_OriginalStatuses);
             try
             {
-                MergeSort(sortedStatuses, "likesCount");
+                mergeSort(sortedStatuses, "likesCount");
             }
             catch(Exception ex)
             {
@@ -25,13 +25,12 @@ namespace Ex01_FaceBook
             return sortedStatuses;
         }
 
-        internal static Status[] GetStatusesSortedByCommentsCount
-            (FacebookObjectCollection<Status> i_OriginalStatuses)
+        public static Status[] GetStatusesSortedByCommentsCount(FacebookObjectCollection<Status> i_OriginalStatuses)
         {
             Status[] sortedStatuses = getStatusesAsArray(i_OriginalStatuses);
             try
             {
-                MergeSort(sortedStatuses, "commentsCount");
+                mergeSort(sortedStatuses, "commentsCount");
             }
             catch(Exception ex)
             {
@@ -53,24 +52,23 @@ namespace Ex01_FaceBook
             return statusesArray;
         }
 
-        public static void MergeSort(Status[] i_StatusesArray, string i_SortBy)
+        private static void mergeSort(Status[] i_StatusesArray, string i_SortBy)
         {
-            MergeSort(i_StatusesArray, 0, i_StatusesArray.Length - 1, i_SortBy);
+            mergeSort(i_StatusesArray, 0, i_StatusesArray.Length - 1, i_SortBy);
         }
-        public static void MergeSort(Status[] i_StatusesArray, 
-            int i_Low, int i_High, string i_SortBy)
+
+        private static void mergeSort(Status[] i_StatusesArray, int i_Low, int i_High, string i_SortBy)
         {
             if (i_Low < i_High)
             {
                 int middle = (i_Low / 2) + (i_High / 2);
-                MergeSort(i_StatusesArray, i_Low, middle, i_SortBy);
-                MergeSort(i_StatusesArray, middle + 1, i_High, i_SortBy);
-                Merge(i_StatusesArray, i_Low, middle, i_High, i_SortBy);
+                mergeSort(i_StatusesArray, i_Low, middle, i_SortBy);
+                mergeSort(i_StatusesArray, middle + 1, i_High, i_SortBy);
+                merge(i_StatusesArray, i_Low, middle, i_High, i_SortBy);
             }
         }
 
-        private static void Merge(Status[] i_StatusesArray, 
-            int i_Low, int i_Middle, int i_High, string i_SortBy)
+        private static void merge(Status[] i_StatusesArray, int i_Low, int i_Middle, int i_High, string i_SortBy)
         {
             int left = i_Low;
             int right = i_Middle + 1;
@@ -91,6 +89,7 @@ namespace Ex01_FaceBook
                         tmp[tmpIndex] = i_StatusesArray[right];
                         right = right + 1;
                     }
+
                     tmpIndex = tmpIndex + 1;
                 }
                 else if(i_SortBy == "commentsCount")
@@ -105,6 +104,7 @@ namespace Ex01_FaceBook
                         tmp[tmpIndex] = i_StatusesArray[right];
                         right = right + 1;
                     }
+
                     tmpIndex = tmpIndex + 1;
                 }
                 else
@@ -137,7 +137,6 @@ namespace Ex01_FaceBook
             {
                 i_StatusesArray[i_Low + i] = tmp[i];
             }
-
         }
     }
 }

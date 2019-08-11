@@ -1,6 +1,4 @@
-﻿using FacebookWrapper;
-using FacebookWrapper.ObjectModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +10,8 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Net;
 using System.IO;
+using FacebookWrapper;
+using FacebookWrapper.ObjectModel;
 
 namespace Ex01_FaceBook
 {
@@ -19,10 +19,10 @@ namespace Ex01_FaceBook
     {
         private User m_LoggedInUser;
         private bool v_LoggedIn = false;
-        ImageList m_ImageList = new ImageList();
-        List<String> m_ImageListUrls = new List<string>();
+        private ImageList m_ImageList = new ImageList();
+        private List<string> m_ImageListUrls = new List<string>();
         private AppSettings m_AppSettings;
-        LoginResult m_LoginResult;
+        private LoginResult m_LoginResult;
 
         public FaceBookMainForm()
         {
@@ -46,7 +46,7 @@ namespace Ex01_FaceBook
                     m_LoginResult = FacebookService.Connect(m_AppSettings.LastAccessToken);
                     loggedIn();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     MessageBox.Show("ERROR: could not automaticlly connect to facebook");
                 }
@@ -92,22 +92,24 @@ namespace Ex01_FaceBook
         {
             v_LoggedIn = false;
             buttonLoginLogout.Text = "Login";
-            ///////move all the profile info to invisible!!************
-            //profile
+            ////move all profile info to invisible
+            // profile
             pictureProfile.Visible = false;
-            textNameReadOnly.Visible =     false;
-            textEmailReadOnly.Visible =    false;
-            textGenderReadOnly.Visible =   false;
-            textUserFullName.Visible =     false;
-            textUserBirthDay.Visible =     false;
-            textUserEmail.Visible =        false;
-            textUserGender.Visible =       false;
+            textNameReadOnly.Visible = false;
+            textEmailReadOnly.Visible = false;
+            textGenderReadOnly.Visible = false;
+            textUserFullName.Visible = false;
+            textUserBirthDay.Visible = false;
+            textUserEmail.Visible = false;
+            textUserGender.Visible = false;
             comboBoxStatusesSort.Visible = false;
             textBirthDayReadOnly.Visible = false;
-            //statuses
+
+            // statuses
             comboBoxStatusesSort.Visible = false;
             listViewUserStatuses.Visible = false;
-            //matchFinder
+
+            // matchFinder
             pictureBoxMatch.Visible = false;
             textBoxMatchFoundBday.Visible = false;
             textBoxMatchFoundGender.Visible = false;
@@ -122,7 +124,9 @@ namespace Ex01_FaceBook
         {
             try
             {
-                m_LoginResult = FacebookService.Login("1450160541956417", //(desig patter's "Design Patterns Course App 2.4" app)
+                ////(desig patter's "Design Patterns Course App 2.4" app)
+                m_LoginResult = FacebookService.Login(
+                    "1450160541956417",
                     "public_profile",
                     "email",
                     "groups_access_member_info",
@@ -139,13 +143,15 @@ namespace Ex01_FaceBook
                     "user_photos",
                     "user_posts",
                     "user_tagged_places",
-                    "user_videos"
-                    );
+                    "user_videos");
             }
-            catch(Exception ex)
+            catch(Exception)
             {
-                MessageBox.Show("an Error aqured while trying to connect to the facebook servers, please try again later",
-                    "Login Request Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(
+                    "An Error aqured while trying to connect to the facebook servers, please try again later",
+                    "Login Request Failure",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
     }

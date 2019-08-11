@@ -1,6 +1,6 @@
 ﻿namespace Ex01_FaceBook
 {
-    partial class FaceBookMainForm
+    public partial class FaceBookMainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -17,6 +17,7 @@
             {
                 components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 
@@ -63,7 +64,7 @@
             this.comboBoxMatchGender = new System.Windows.Forms.ComboBox();
             this.labelMatchGender = new System.Windows.Forms.Label();
             this.labelMatchQuestion = new System.Windows.Forms.Label();
-            this.FriendsListTab = new System.Windows.Forms.TabPage();
+            this.FriendsAndAlbums = new System.Windows.Forms.TabPage();
             this.textBoxAlbumOwner = new System.Windows.Forms.TextBox();
             this.textBoxAlbumCreationTime = new System.Windows.Forms.TextBox();
             this.textBoxAlbumLikesCount = new System.Windows.Forms.TextBox();
@@ -89,7 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMatch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinAge)).BeginInit();
-            this.FriendsListTab.SuspendLayout();
+            this.FriendsAndAlbums.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSelectedFriend)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,7 +98,7 @@
             // 
             this.tabsControl.Controls.Add(this.ProfileTab);
             this.tabsControl.Controls.Add(this.MatchFinderTab);
-            this.tabsControl.Controls.Add(this.FriendsListTab);
+            this.tabsControl.Controls.Add(this.FriendsAndAlbums);
             this.tabsControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabsControl.Location = new System.Drawing.Point(0, 0);
             this.tabsControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -488,33 +489,33 @@
             this.labelMatchQuestion.TabIndex = 0;
             this.labelMatchQuestion.Text = "What Are You Interested In?";
             // 
-            // FriendsListTab
+            // FriendsAndAlbums
             // 
-            this.FriendsListTab.Controls.Add(this.textBoxAlbumOwner);
-            this.FriendsListTab.Controls.Add(this.textBoxAlbumCreationTime);
-            this.FriendsListTab.Controls.Add(this.textBoxAlbumLikesCount);
-            this.FriendsListTab.Controls.Add(this.textBoxAlbumCommentsCount);
-            this.FriendsListTab.Controls.Add(this.textBoxCommentsCountReadOnly);
-            this.FriendsListTab.Controls.Add(this.textBoxAlbumOwnerReadOnly);
-            this.FriendsListTab.Controls.Add(this.textBoxCreationTimeReadOnly);
-            this.FriendsListTab.Controls.Add(this.textBoxLikesCountReadOnly);
-            this.FriendsListTab.Controls.Add(this.textBoxPhotosTitle);
-            this.FriendsListTab.Controls.Add(this.listView1);
-            this.FriendsListTab.Controls.Add(this.textBoxFriendsListHeadLine);
-            this.FriendsListTab.Controls.Add(this.textBoxAlbumsHeadLine);
-            this.FriendsListTab.Controls.Add(this.listViewSelectedAlbumPhotos);
-            this.FriendsListTab.Controls.Add(this.pictureBoxSelectedFriend);
-            this.FriendsListTab.Controls.Add(this.listBoxFriendsList);
-            this.FriendsListTab.Controls.Add(this.textBoxNumberOfFriends);
-            this.FriendsListTab.Controls.Add(this.textBoxFriendsCounter);
-            this.FriendsListTab.Location = new System.Drawing.Point(4, 25);
-            this.FriendsListTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FriendsListTab.Name = "FriendsListTab";
-            this.FriendsListTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.FriendsListTab.Size = new System.Drawing.Size(1022, 573);
-            this.FriendsListTab.TabIndex = 2;
-            this.FriendsListTab.Text = "FriendsListTab";
-            this.FriendsListTab.UseVisualStyleBackColor = true;
+            this.FriendsAndAlbums.Controls.Add(this.textBoxAlbumOwner);
+            this.FriendsAndAlbums.Controls.Add(this.textBoxAlbumCreationTime);
+            this.FriendsAndAlbums.Controls.Add(this.textBoxAlbumLikesCount);
+            this.FriendsAndAlbums.Controls.Add(this.textBoxAlbumCommentsCount);
+            this.FriendsAndAlbums.Controls.Add(this.textBoxCommentsCountReadOnly);
+            this.FriendsAndAlbums.Controls.Add(this.textBoxAlbumOwnerReadOnly);
+            this.FriendsAndAlbums.Controls.Add(this.textBoxCreationTimeReadOnly);
+            this.FriendsAndAlbums.Controls.Add(this.textBoxLikesCountReadOnly);
+            this.FriendsAndAlbums.Controls.Add(this.textBoxPhotosTitle);
+            this.FriendsAndAlbums.Controls.Add(this.listView1);
+            this.FriendsAndAlbums.Controls.Add(this.textBoxFriendsListHeadLine);
+            this.FriendsAndAlbums.Controls.Add(this.textBoxAlbumsHeadLine);
+            this.FriendsAndAlbums.Controls.Add(this.listViewSelectedAlbumPhotos);
+            this.FriendsAndAlbums.Controls.Add(this.pictureBoxSelectedFriend);
+            this.FriendsAndAlbums.Controls.Add(this.listBoxFriendsList);
+            this.FriendsAndAlbums.Controls.Add(this.textBoxNumberOfFriends);
+            this.FriendsAndAlbums.Controls.Add(this.textBoxFriendsCounter);
+            this.FriendsAndAlbums.Location = new System.Drawing.Point(4, 25);
+            this.FriendsAndAlbums.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FriendsAndAlbums.Name = "FriendsAndAlbums";
+            this.FriendsAndAlbums.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FriendsAndAlbums.Size = new System.Drawing.Size(1022, 573);
+            this.FriendsAndAlbums.TabIndex = 2;
+            this.FriendsAndAlbums.Text = "FriendsAndAlbums";
+            this.FriendsAndAlbums.UseVisualStyleBackColor = true;
             // 
             // textBoxAlbumOwner
             // 
@@ -717,8 +718,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMatch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxAge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinAge)).EndInit();
-            this.FriendsListTab.ResumeLayout(false);
-            this.FriendsListTab.PerformLayout();
+            this.FriendsAndAlbums.ResumeLayout(false);
+            this.FriendsAndAlbums.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSelectedFriend)).EndInit();
             this.ResumeLayout(false);
 
@@ -728,7 +729,7 @@
 
         private System.Windows.Forms.TabControl tabsControl;
         private System.Windows.Forms.TabPage MatchFinderTab;
-        private System.Windows.Forms.TabPage FriendsListTab;
+        private System.Windows.Forms.TabPage FriendsAndAlbums;
         private System.Windows.Forms.TextBox textBoxFriendsCounter;
         private System.Windows.Forms.TextBox textBoxNumberOfFriends;
         private System.Windows.Forms.TabPage ProfileTab;
@@ -780,4 +781,3 @@
         private System.Windows.Forms.TextBox textBoxLikesCountReadOnly;
     }
 }
-

@@ -1,16 +1,16 @@
-﻿using FacebookWrapper;
-using FacebookWrapper.ObjectModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FacebookWrapper;
+using FacebookWrapper.ObjectModel;
 
 namespace Ex01_FaceBook
 {
-    partial class FaceBookMainForm
+    public partial class FaceBookMainForm
     {
         private void ComboBoxStatusesSort_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -18,20 +18,20 @@ namespace Ex01_FaceBook
             {
                 switch (comboBoxStatusesSort.SelectedIndex)
                 {
-                    case (0):
+                    case 0:
                         fillStatusesListViewByDate();
                         break;
-                    case (1):
+                    case 1:
                         fillStatusesListViewByLikesCount();
                         break;
-                    case (2):
+                    case 2:
                         fillStatusesListViewByCommentsCount();
                         break;
                     default:
                         break;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("an error accured while trying to sort your statuses...");
             }
@@ -63,17 +63,20 @@ namespace Ex01_FaceBook
             comboBoxStatusesSort.Visible = true;
             listViewUserStatuses.Visible = true;
             ColumnHeader onlyColumn = new ColumnHeader();
-            onlyColumn.Text = "";
+            onlyColumn.Text = string.Empty;
             onlyColumn.Width = listViewUserStatuses.Width - 20;
             listViewUserStatuses.Columns.Add(onlyColumn);
             try
             {
                 fillStatusesListViewByDate();
             }
-            catch(Exception ex)
+            catch(Exception)
             {
-                MessageBox.Show("an error aqured while trying to download your statuses",
-                    "Statuses Request Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(
+                    "An error aqured while trying to download your statuses",
+                    "Statuses Request Failure",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
 
@@ -117,13 +120,15 @@ namespace Ex01_FaceBook
             lvStatus.Font = statusFont;
             lvStatus.BackColor = Color.LightBlue;
             ListViewItem lvStatusInfo = new ListViewItem(
-                string.Format("updated at {0} | {1} likes | {2} comments",
-                i_Status.CreatedTime.ToString(),
-                i_Status.LikedBy.Count.ToString(),
-                i_Status.Comments.Count.ToString())
-                );
-            Font statusInfoFont = new Font(FontFamily.GenericSansSerif, statusInfoFontSize,
-                FontStyle.Italic);
+                string.Format(
+                    "updated at {0} | {1} likes | {2} comments",
+                    i_Status.CreatedTime.ToString(),
+                    i_Status.LikedBy.Count.ToString(),
+                    i_Status.Comments.Count.ToString()));
+            Font statusInfoFont = new Font(
+                                            FontFamily.GenericSansSerif,
+                                            statusInfoFontSize,
+                                            FontStyle.Italic);
             lvStatusInfo.Font = statusInfoFont;
             lvStatusInfo.BackColor = Color.LightBlue;
             ListViewItem lvSeparetor = new ListViewItem();
@@ -134,8 +139,11 @@ namespace Ex01_FaceBook
         private void listViewUserStatuses_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
             if (e.IsSelected)
+            {
                 e.Item.Selected = false;
+            }
         }
+
         private void fetchPersonalInformation()
         {
             textBirthDayReadOnly.Visible = true;

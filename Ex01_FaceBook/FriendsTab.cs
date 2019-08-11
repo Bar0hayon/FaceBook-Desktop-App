@@ -1,5 +1,4 @@
-﻿using FacebookWrapper.ObjectModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -8,10 +7,11 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FacebookWrapper.ObjectModel;
 
 namespace Ex01_FaceBook
 {
-    partial class FaceBookMainForm
+    public partial class FaceBookMainForm
     {
         private void listBoxFriendsList_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -52,12 +52,10 @@ namespace Ex01_FaceBook
             }
         }
 
-
         private void displayNumberOfFriends()
         {
             textBoxFriendsCounter.Text = listBoxFriendsList.Items.Count.ToString();
         }
-
 
         private void fetchAlbumsList()
         {
@@ -78,6 +76,7 @@ namespace Ex01_FaceBook
                 listViewSelectedAlbumPhotos.Items.Add(album.Name, albumIndex);
                 albumIndex++;
             }
+
             listViewSelectedAlbumPhotos.LargeImageList = m_ImageList;
         }
 
@@ -91,7 +90,7 @@ namespace Ex01_FaceBook
                 {
                     listView1.Clear();
                     int selectedIndex = listViewSelectedAlbumPhotos.SelectedIndices[0];
-                    for (int i = 0; i <m_LoggedInUser.Albums[selectedIndex].Count; i++)
+                    for (int i = 0; i < m_LoggedInUser.Albums[selectedIndex].Count; i++)
                     {
                         fetchAlbumData(selectedIndex);
                         m_ImageListUrls.Add(m_LoggedInUser.Albums[selectedIndex].PictureSmallURL);
@@ -103,9 +102,10 @@ namespace Ex01_FaceBook
                         Image newImage = Image.FromStream(stream);
                         m_ImageList.Images.Add(newImage);
 
-                        listView1.Items.Add("", albumIndex);
+                        listView1.Items.Add(string.Empty, albumIndex);
                         albumIndex++;
                     }
+
                     listView1.LargeImageList = m_ImageList;
                 }
             }

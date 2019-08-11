@@ -1,17 +1,23 @@
-﻿using FacebookWrapper.ObjectModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FacebookWrapper.ObjectModel;
 
 namespace Ex01_FaceBook
 {
     public partial class FaceBookMainForm
     {
         private List<User> m_MatchesList = new List<User>();
+
         private void ButtonMatchFinder_Click(object sender, EventArgs e)
+        {
+            findMatch();   
+        }
+
+        private void findMatch()
         {
             listBoxMatches.SelectedIndexChanged += ListBoxMatches_SelectedIndexChanged;
             if (findMatchRequestIsLegal())
@@ -29,6 +35,7 @@ namespace Ex01_FaceBook
                             listBoxMatches.Items.Add(friend.Name);
                         }
                     }
+
                     if (m_MatchesList.Count == 0)
                     {
                         MessageBox.Show("no matches were found :(", "MatchFinder Resault", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -41,19 +48,21 @@ namespace Ex01_FaceBook
             }
             else
             {
-                MessageBox.Show("Request is not legal! \n" +
+                MessageBox.Show(
+                    "Request is not legal! \n" +
                     "please make sure that all of the filds are filled\n" +
                     "and that the 'minimum age' <= 'maximum age'",
                     "MatchFinder Resault",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
 
         private bool findMatchRequestIsLegal()
         {
-            return (comboBoxMatchGender.SelectedItem != null
+            return comboBoxMatchGender.SelectedItem != null
                 &&
-                numericUpDownMinAge.Value <= numericUpDownMaxAge.Value);
+                numericUpDownMinAge.Value <= numericUpDownMaxAge.Value;
         }
 
         private void ListBoxMatches_SelectedIndexChanged(object sender, EventArgs e)
@@ -77,8 +86,8 @@ namespace Ex01_FaceBook
             if (i_Friend.Birthday != null)
             {
                 int friendAge = getAgeFromBirthday(i_Friend.Birthday);
-                isAgeMatches = (friendAge >= numericUpDownMinAge.Value &&
-                    friendAge <= numericUpDownMaxAge.Value);
+                isAgeMatches = friendAge >= numericUpDownMinAge.Value &&
+                    friendAge <= numericUpDownMaxAge.Value;
             }
 
             return isAgeMatches;
@@ -96,10 +105,10 @@ namespace Ex01_FaceBook
 
         private bool isRelationshipAvailable(User i_Friend)
         {
-            return (i_Friend.RelationshipStatus == User.eRelationshipStatus.Widowed ||
+            return i_Friend.RelationshipStatus == User.eRelationshipStatus.Widowed ||
                     i_Friend.RelationshipStatus == User.eRelationshipStatus.Single ||
                     i_Friend.RelationshipStatus == User.eRelationshipStatus.Separated ||
-                    i_Friend.RelationshipStatus == User.eRelationshipStatus.Divorced);
+                    i_Friend.RelationshipStatus == User.eRelationshipStatus.Divorced;
         }
 
         private bool isGenderMatch(User i_Friend)
@@ -116,6 +125,7 @@ namespace Ex01_FaceBook
                     }
                 }
             }
+
             if(comboBoxMatchGender.SelectedItem.ToString().ToLower() == "both")
             {
                 isFriendGenderMatch = true;
@@ -126,7 +136,7 @@ namespace Ex01_FaceBook
                     comboBoxMatchGender.SelectedItem.ToString().ToLower();
             }
 
-            return (isFriendGenderMatch && isFriendInterested);
+            return isFriendGenderMatch && isFriendInterested;
         }
     }
 }
