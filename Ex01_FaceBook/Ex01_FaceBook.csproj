@@ -53,7 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettings.cs" />
-    <Compile Include="FriendsTab.cs">
+    <Compile Include="FriendsAndAlbums.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MatchFinder.cs">

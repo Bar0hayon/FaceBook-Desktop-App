@@ -33,6 +33,7 @@ namespace Ex01_FaceBook
             this.Location = m_AppSettings.LastWindowLocation;
             this.checkBoxRememberMe.Checked = m_AppSettings.RememberUser;
             this.comboBoxStatusesSort.SelectedIndexChanged += ComboBoxStatusesSort_SelectedIndexChanged;
+            this.MinimumSize = new Size(750, 600);
         }
 
         protected override void OnShown(EventArgs e)
